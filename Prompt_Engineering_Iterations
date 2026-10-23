@@ -1,3 +1,5 @@
+----------------------------Promt Usado----------------------------
+
 Actúa como un ingeniero principiante que prepara una solución de transferencia de calor para revisión técnica. Ayúdame a resolver el ejercicio 5-34 y documentar el proceso según la rúbrica adjunta. Explica en español, paso a paso, con ecuaciones, sustituciones y unidades.
 
 Referencias que debes utilizar
@@ -65,3 +67,197 @@ Conexión con la adaptación posterior
 Al finalizar, explica brevemente qué faltaría para demostrar un enfriamiento más rápido mediante un análisis transitorio. No confundas una temperatura estacionaria menor con un menor tiempo de enfriamiento. No inventes densidades, calores específicos ni una identidad para el material no metálico: señala los datos adicionales que habría que obtener y las condiciones que habría que definir.
 
 Organiza la respuesta para que podamos guardar este prompt, tu solución y nuestras futuras correcciones en GitHub. Prioriza una solución comprensible y verificable, sin saltarte pasos algebraicos importantes.
+
+
+
+----------------------------RESPUESTA POR CLAUDE AI------------------------
+
+# Ejercicio 5-34: solución original (diferencias finitas, estacionario)
+
+Resuelvo el 5-34 con los datos de tu prompt, que coinciden con el enunciado del PDF. Antes de empezar, una corrección: en mi mensaje anterior supuse que tu ejercicio base era el 5-36 por el resaltado amarillo. Con este prompt trabajo el 5-34.
+
+**Sobre las libretas:** no extraje páginas de `Libreta.pdf` ni de `Libreta_Examen_2.pdf`, así que no cito diapositivas. Todo está derivado de los principios de balance de energía. Cuando revises, agrega tú las referencias de página.
+
+## 1. Sistema físico
+
+El calor entra por abajo (x = 0) con flujo q″ = 150 W/m² y sale por convección arriba (x = 50 mm). Con la geometría unidimensional, la tasa de transferencia (W) es q″·A, y A se cancela en todas las ecuaciones. Las incógnitas son T₀…T₁₀.
+
+## 2. Suposiciones
+
+- **Del enunciado:** flujo uniforme de 150 W/m² abajo, convección con T∞ = 15 °C y h = 5 W/m²·K arriba, Δx = 5 mm.
+- **Del modelo:** estado estacionario, conducción 1D, k constante en cada capa, sin generación, contacto perfecto (sin resistencia de contacto) y radiación despreciable.
+- **¿Por qué es estacionario?** El enunciado pide la temperatura del equipo en operación. Las diferencias finitas aquí solo discretizan el espacio, y por eso no hay término ρc·∂T/∂t.
+
+## 3. Ecuaciones por balance de energía
+
+La base es E_ent − E_sal + E_gen = ΔE/Δt. En estacionario y sin generación queda Σ q_entrando = 0 en cada volumen de control. Los volúmenes tienen ancho Δx en los nodos interiores y Δx/2 en las fronteras. El área A se cancela.
+
+| Nodo | Balance | Ecuación |
+|---|---|---|
+| 0 (flujo impuesto) | q″ + k_m(T₁−T₀)/Δx = 0 | T₀ − T₁ = q″Δx/k_m |
+| 1–5 y 7–9 (interiores) | k(T_{i−1}−T_i)/Δx + k(T_{i+1}−T_i)/Δx = 0 | T_{i−1} − 2T_i + T_{i+1} = 0 |
+| 6 (interfaz) | k_m(T₅−T₆)/Δx + k_n(T₇−T₆)/Δx = 0 | k_m T₅ − (k_m+k_n)T₆ + k_n T₇ = 0 |
+| 10 (convección) | k_n(T₉−T₁₀)/Δx + h(T∞−T₁₀) = 0 | (k_n/Δx) T₉ − (k_n/Δx + h) T₁₀ = −hT∞ |
+
+**Signos y distancias:** cada término de conducción es k(T_vecino − T_nodo)/Δx, positivo cuando el calor entra al nodo. En la interfaz, el volumen de control tiene medio metal y medio no metal. Como no hay generación ni almacenamiento, esas mitades no aportan términos y solo quedan los dos flujos conductivos. Cada flujo conserva su propia k, así que la interfaz **no** es un promedio de T₅ y T₇.
+
+**Coeficientes numéricos.** Aquí k_m/Δx = 7200 W/m²·K y k_n/Δx = 10 W/m²·K.
+
+- Nodo 0: T₀ − T₁ = 0.0208333
+- Nodos 1–5: T_{i−1} − 2T_i + T_{i+1} = 0
+- Nodo 6: 7200 T₅ − 7210 T₆ + 10 T₇ = 0
+- Nodos 7–9: T_{i−1} − 2T_i + T_{i+1} = 0
+- Nodo 10: 10 T₉ − 15 T₁₀ = −75
+
+## 4. Solución
+
+| Nodo | x (mm) | Zona | T (°C) |
+|---|---|---|---|
+| 0 | 0 | Frontera, flujo impuesto | 105.1250 |
+| 1 | 5 | Metal | 105.1042 |
+| 2 | 10 | Metal | 105.0833 |
+| 3 | 15 | Metal | 105.0625 |
+| 4 | 20 | Metal | 105.0417 |
+| 5 | 25 | Metal | 105.0208 |
+| 6 | 30 | Interfaz | 105.0000 |
+| 7 | 35 | No metal | 90.0000 |
+| 8 | 40 | No metal | 75.0000 |
+| 9 | 45 | No metal | 60.0000 |
+| 10 | 50 | Frontera, convección | 45.0000 |
+
+La gráfica T(x) con la interfaz y el límite de 93 °C está en `T_vs_x_5_34.png`, y el código reproducible está en `ej_5_34.py`.
+
+**Pendientes.** En el metal, dT/dx = q″/k_m ≈ 4.17 K/m, es decir 0.021 K por nodo, casi plana. En el no metal, dT/dx = q″/k_n = 3000 K/m, es decir 15 K por nodo. Todo el salto térmico ocurre en el aislante.
+
+## 5. Cumplimiento
+
+La temperatura máxima del metal es 105.125 °C en x = 0, y **supera el límite de 93 °C del enunciado**. Bajo esas condiciones, la placa SB-96 **no cumpliría** el criterio planteado en el ejercicio. Esto es solo respecto al límite que da el problema, no una certificación normativa real.
+
+## 6. h umbral
+
+La temperatura máxima es T₀ = T∞ + q″(1/h + L_n/k_n + L_m/k_m). Con T₀ = 93 °C:
+
+1/h = (93 − 15)/150 − 0.4 − 0.000833 = 0.119167 m²·K/W
+
+**h = 8.39 W/m²·K**
+
+Comprobación: con h = 8.3916, T₀ = 93.000 °C. Para mantenerla **estrictamente por debajo** de 93 °C se necesita h > 8.39 W/m²·K. Con h = 8.5, T₀ = 92.77 °C.
+
+## 7. Verificación (hecha por la AI)
+
+| Resultado | Método | Resultado |
+|---|---|---|
+| Las 11 temperaturas | Resistencias: R_conv = 0.2, R_n = 0.4, R_m = 0.000833 m²·K/W | T₁₀ = 45, T₆ = 105, T₀ = 105.125: coincide |
+| Balance global | q″_in = h(T₁₀ − T∞) | 150 = 5·30 = 150 W/m²: cumple |
+| Continuidad en la interfaz | Flujo en cada lado | Metal: 7200·0.0208 = 150; no metal: 10·15 = 150: cumple |
+| Condiciones de frontera | Nodos 0 y 10 | Ambas se satisfacen |
+| Residuos de las 11 ecuaciones | Código | Máximo ≈ 1×10⁻¹⁰: cumple |
+| Coherencia física | Signos y unidades | T decrece hacia el aire y las unidades son consistentes: cumple |
+
+**Qué deben reproducir a mano:** (a) los coeficientes 7200, 7210, 10 y 15; (b) la cadena de resistencias y T₀ = 105.125 °C; (c) el despeje de h = 8.39; (d) el residuo del nodo 6 con T₅ = 105.0208 y T₇ = 90. Esta verificación de la AI no sustituye su auditoría manual, y no he afirmado ningún error de la AI porque no encontré ninguno.
+
+## 8. Conexión con la adaptación (enfriamiento)
+
+Una temperatura estacionaria menor no implica un enfriamiento más rápido. Para demostrar tiempos necesitan un análisis transitorio, con estos datos y condiciones por definir:
+
+- Densidad y calor específico de cada capa (los del no metal no están en el enunciado, no los inventes).
+- Condición inicial (por ejemplo, T = 105 °C en todo el espesor) y qué pasa con el flujo de 150 W/m² (se apaga o no).
+- Biot (para ver si aplica capacitancia concentrada) y Fourier (para el paso de tiempo y la estabilidad del método explícito).
+
+**Para GitHub**, guarden el prompt, esta respuesta y el script. Sus correcciones futuras pueden ir como commits separados. Cuando consigan la plantilla de la clase, ajusto el prompt a ese formato.
+
+"""Ejercicio 5-34 - Diferencias finitas, 1D, estacionario, sin generación.
+Todas las ecuaciones se escriben como balances de flujo de calor [W/m^2]
+(se divide el balance en W entre el área A), de modo que todos los residuos
+tienen las mismas unidades."""
+import numpy as np
+import matplotlib; matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+
+km, kn = 36.0, 0.05            # W/(m K)
+Lm, Ln = 0.030, 0.020          # m
+dx = 0.005                     # m
+q, Tinf, h = 150.0, 15.0, 5.0  # W/m^2, °C, W/(m^2 K)
+N, ni = 11, 6                  # nodos 0..10, interfaz = nodo 6
+x = np.arange(N) * dx
+
+def ensamblar(h):
+    """A T = b, con cada fila = balance de flujos en W/m^2 (signo: entra al nodo = +)."""
+    A = np.zeros((N, N)); b = np.zeros(N)
+    # Nodo 0: q'' + km (T1 - T0)/dx = 0
+    A[0, 0], A[0, 1], b[0] = -km/dx, km/dx, -q
+    # Interiores: k (T_{i-1} - T_i)/dx + k (T_{i+1} - T_i)/dx = 0   (k del material)
+    for i in range(1, N-1):
+        if i == ni: continue
+        k = km if i < ni else kn
+        A[i, i-1], A[i, i], A[i, i+1] = k/dx, -2*k/dx, k/dx
+    # Interfaz: km (T5 - T6)/dx + kn (T7 - T6)/dx = 0
+    A[ni, ni-1], A[ni, ni], A[ni, ni+1] = km/dx, -(km+kn)/dx, kn/dx
+    # Nodo 10: kn (T9 - T10)/dx + h (Tinf - T10) = 0
+    A[10, 9], A[10, 10], b[10] = kn/dx, -(kn/dx + h), -h*Tinf
+    return A, b
+
+def resolver(h):
+    A, b = ensamblar(h)
+    return A, b, np.linalg.solve(A, b)
+
+A, b, T = resolver(h)
+
+# --- Solución a mano (sustitución hacia atrás) ---------------------------
+dT_m = q*dx/km                         # caída por nodo en el metal = 1/48 K
+dT_n = (km/kn)*dT_m                    # de la interfaz: km dT_m = kn dT_n  -> 15 K
+T10 = Tinf + (kn/dx)*dT_n/h            # nodo 10: (kn/dx) dT_n = h (T10 - Tinf)
+T_mano = np.empty(N)
+T_mano[10] = T10
+for i in range(9, ni-1, -1): T_mano[i] = T_mano[i+1] + dT_n   # nodos 9..6
+for i in range(ni-1, -1, -1): T_mano[i] = T_mano[i+1] + dT_m  # nodos 5..0
+print("max |T_mano - T_numpy| =", np.abs(T_mano - T).max())
+
+print("\nNodo  x[mm]   T[°C]")
+for i in range(N): print(f"{i:4d} {x[i]*1000:6.1f}  {T[i]:.6f}")
+
+# --- Flujos entre nodos y residuos [W/m^2] -------------------------------
+k_tramo = [km]*ni + [kn]*(N-1-ni)      # tramos 0-1..5-6: metal; 6-7..9-10: no metal
+flujos = [k_tramo[i]*(T[i]-T[i+1])/dx for i in range(N-1)]
+print("\nFlujo por tramo [W/m^2]:", np.round(flujos, 9))
+print("Flujo convectivo h(T10-Tinf):", h*(T[10]-Tinf))
+
+res = A @ T - b                         # todos en W/m^2
+grupos = {"Nodo 0 (flujo impuesto)": [0],
+          "Interiores metal (1-5)": range(1, 6),
+          "Interfaz (6)": [6],
+          "Interiores no metal (7-9)": range(7, 10),
+          "Nodo 10 (convección)": [10]}
+print("\nResiduos máx. por tipo de ecuación [W/m^2]:")
+for g, idx in grupos.items(): print(f"  {g:28s} {np.abs(res[list(idx)]).max():.2e}")
+
+# Interfaz con temperaturas redondeadas (solo para ilustrar el redondeo)
+print("\nInterfaz con T5=105.0208 (redondeado):", km*(105.0208-105.0)/dx, "vs", kn*(105.0-90.0)/dx)
+print("Interfaz con T5 exacto:", km*(T[5]-T[6])/dx)
+
+# --- Caídas de temperatura ----------------------------------------------
+print("\nCaída metal:", T[0]-T[6], " no metal:", T[6]-T[10], " película convectiva:", T[10]-Tinf)
+
+# --- Resistencias por unidad de área R'' [m^2 K/W] ----------------------
+Rm_, Rn_, Rc_ = Lm/km, Ln/kn, 1/h
+print("R'' metal, no metal, conv:", Rm_, Rn_, Rc_)
+print("T10, T6, T0 por R'':", Tinf+q*Rc_, Tinf+q*(Rc_+Rn_), Tinf+q*(Rc_+Rn_+Rm_))
+
+# --- h umbral ------------------------------------------------------------
+inv_h = (93-Tinf)/q - Rn_ - Rm_
+h_umb = 1/inv_h
+print("\n1/h umbral =", inv_h, " h umbral =", h_umb, " (=1200/143 =", 1200/143, ")")
+for hh in (8.39, h_umb, 8.5, 10.0):
+    print(f"h = {hh:.6f} -> Tmax = {resolver(hh)[2][0]:.6f} °C")
+
+# --- Gráfica -------------------------------------------------------------
+fig, ax = plt.subplots(1, 2, figsize=(11, 4.5))
+for a in ax:
+    a.axvspan(0, 30, color="tab:blue", alpha=.08); a.axvspan(30, 50, color="tab:orange", alpha=.08)
+    a.axvline(30, color="gray", ls=":"); a.grid(alpha=.3); a.set_xlabel("x [mm]")
+ax[0].plot(x*1000, T, "o-"); ax[0].axhline(93, color="r", ls="--", label="Límite 93 °C")
+ax[0].text(3, 48, "Metal SB-96", fontsize=9); ax[0].text(33, 98, "No metal", fontsize=9)
+ax[0].set_ylabel("T [°C]"); ax[0].set_title("T(x), h = 5 W/m²·K"); ax[0].legend()
+ax[1].plot(x[:ni+1]*1000, T[:ni+1], "o-"); ax[1].set_title("Zoom en el metal (pendiente pequeña, no nula)")
+ax[1].set_ylabel("T [°C]")
+plt.tight_layout(); plt.savefig("T_vs_x_5_34.png", dpi=150)
