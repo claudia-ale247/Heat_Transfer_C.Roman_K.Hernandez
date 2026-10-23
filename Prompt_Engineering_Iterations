@@ -1,1 +1,93 @@
+# Ejercicio 5-34: solución original (diferencias finitas, estacionario)
 
+Resuelvo el 5-34 con los datos de tu prompt, que coinciden con el enunciado del PDF. Antes de empezar, una corrección: en mi mensaje anterior supuse que tu ejercicio base era el 5-36 por el resaltado amarillo. Con este prompt trabajo el 5-34.
+
+**Sobre las libretas:** no extraje páginas de `Libreta.pdf` ni de `Libreta_Examen_2.pdf`, así que no cito diapositivas. Todo está derivado de los principios de balance de energía. Cuando revises, agrega tú las referencias de página.
+
+## 1. Sistema físico
+
+El calor entra por abajo (x = 0) con flujo q″ = 150 W/m² y sale por convección arriba (x = 50 mm). Con la geometría unidimensional, la tasa de transferencia (W) es q″·A, y A se cancela en todas las ecuaciones. Las incógnitas son T₀…T₁₀.
+
+## 2. Suposiciones
+
+- **Del enunciado:** flujo uniforme de 150 W/m² abajo, convección con T∞ = 15 °C y h = 5 W/m²·K arriba, Δx = 5 mm.
+- **Del modelo:** estado estacionario, conducción 1D, k constante en cada capa, sin generación, contacto perfecto (sin resistencia de contacto) y radiación despreciable.
+- **¿Por qué es estacionario?** El enunciado pide la temperatura del equipo en operación. Las diferencias finitas aquí solo discretizan el espacio, y por eso no hay término ρc·∂T/∂t.
+
+## 3. Ecuaciones por balance de energía
+
+La base es E_ent − E_sal + E_gen = ΔE/Δt. En estacionario y sin generación queda Σ q_entrando = 0 en cada volumen de control. Los volúmenes tienen ancho Δx en los nodos interiores y Δx/2 en las fronteras. El área A se cancela.
+
+| Nodo | Balance | Ecuación |
+|---|---|---|
+| 0 (flujo impuesto) | q″ + k_m(T₁−T₀)/Δx = 0 | T₀ − T₁ = q″Δx/k_m |
+| 1–5 y 7–9 (interiores) | k(T_{i−1}−T_i)/Δx + k(T_{i+1}−T_i)/Δx = 0 | T_{i−1} − 2T_i + T_{i+1} = 0 |
+| 6 (interfaz) | k_m(T₅−T₆)/Δx + k_n(T₇−T₆)/Δx = 0 | k_m T₅ − (k_m+k_n)T₆ + k_n T₇ = 0 |
+| 10 (convección) | k_n(T₉−T₁₀)/Δx + h(T∞−T₁₀) = 0 | (k_n/Δx) T₉ − (k_n/Δx + h) T₁₀ = −hT∞ |
+
+**Signos y distancias:** cada término de conducción es k(T_vecino − T_nodo)/Δx, positivo cuando el calor entra al nodo. En la interfaz, el volumen de control tiene medio metal y medio no metal. Como no hay generación ni almacenamiento, esas mitades no aportan términos y solo quedan los dos flujos conductivos. Cada flujo conserva su propia k, así que la interfaz **no** es un promedio de T₅ y T₇.
+
+**Coeficientes numéricos.** Aquí k_m/Δx = 7200 W/m²·K y k_n/Δx = 10 W/m²·K.
+
+- Nodo 0: T₀ − T₁ = 0.0208333
+- Nodos 1–5: T_{i−1} − 2T_i + T_{i+1} = 0
+- Nodo 6: 7200 T₅ − 7210 T₆ + 10 T₇ = 0
+- Nodos 7–9: T_{i−1} − 2T_i + T_{i+1} = 0
+- Nodo 10: 10 T₉ − 15 T₁₀ = −75
+
+## 4. Solución
+
+| Nodo | x (mm) | Zona | T (°C) |
+|---|---|---|---|
+| 0 | 0 | Frontera, flujo impuesto | 105.1250 |
+| 1 | 5 | Metal | 105.1042 |
+| 2 | 10 | Metal | 105.0833 |
+| 3 | 15 | Metal | 105.0625 |
+| 4 | 20 | Metal | 105.0417 |
+| 5 | 25 | Metal | 105.0208 |
+| 6 | 30 | Interfaz | 105.0000 |
+| 7 | 35 | No metal | 90.0000 |
+| 8 | 40 | No metal | 75.0000 |
+| 9 | 45 | No metal | 60.0000 |
+| 10 | 50 | Frontera, convección | 45.0000 |
+
+La gráfica T(x) con la interfaz y el límite de 93 °C está en `T_vs_x_5_34.png`, y el código reproducible está en `ej_5_34.py`.
+
+**Pendientes.** En el metal, dT/dx = q″/k_m ≈ 4.17 K/m, es decir 0.021 K por nodo, casi plana. En el no metal, dT/dx = q″/k_n = 3000 K/m, es decir 15 K por nodo. Todo el salto térmico ocurre en el aislante.
+
+## 5. Cumplimiento
+
+La temperatura máxima del metal es 105.125 °C en x = 0, y **supera el límite de 93 °C del enunciado**. Bajo esas condiciones, la placa SB-96 **no cumpliría** el criterio planteado en el ejercicio. Esto es solo respecto al límite que da el problema, no una certificación normativa real.
+
+## 6. h umbral
+
+La temperatura máxima es T₀ = T∞ + q″(1/h + L_n/k_n + L_m/k_m). Con T₀ = 93 °C:
+
+1/h = (93 − 15)/150 − 0.4 − 0.000833 = 0.119167 m²·K/W
+
+**h = 8.39 W/m²·K**
+
+Comprobación: con h = 8.3916, T₀ = 93.000 °C. Para mantenerla **estrictamente por debajo** de 93 °C se necesita h > 8.39 W/m²·K. Con h = 8.5, T₀ = 92.77 °C.
+
+## 7. Verificación (hecha por la AI)
+
+| Resultado | Método | Resultado |
+|---|---|---|
+| Las 11 temperaturas | Resistencias: R_conv = 0.2, R_n = 0.4, R_m = 0.000833 m²·K/W | T₁₀ = 45, T₆ = 105, T₀ = 105.125: coincide |
+| Balance global | q″_in = h(T₁₀ − T∞) | 150 = 5·30 = 150 W/m²: cumple |
+| Continuidad en la interfaz | Flujo en cada lado | Metal: 7200·0.0208 = 150; no metal: 10·15 = 150: cumple |
+| Condiciones de frontera | Nodos 0 y 10 | Ambas se satisfacen |
+| Residuos de las 11 ecuaciones | Código | Máximo ≈ 1×10⁻¹⁰: cumple |
+| Coherencia física | Signos y unidades | T decrece hacia el aire y las unidades son consistentes: cumple |
+
+**Qué deben reproducir a mano:** (a) los coeficientes 7200, 7210, 10 y 15; (b) la cadena de resistencias y T₀ = 105.125 °C; (c) el despeje de h = 8.39; (d) el residuo del nodo 6 con T₅ = 105.0208 y T₇ = 90. Esta verificación de la AI no sustituye su auditoría manual, y no he afirmado ningún error de la AI porque no encontré ninguno.
+
+## 8. Conexión con la adaptación (enfriamiento)
+
+Una temperatura estacionaria menor no implica un enfriamiento más rápido. Para demostrar tiempos necesitan un análisis transitorio, con estos datos y condiciones por definir:
+
+- Densidad y calor específico de cada capa (los del no metal no están en el enunciado, no los inventes).
+- Condición inicial (por ejemplo, T = 105 °C en todo el espesor) y qué pasa con el flujo de 150 W/m² (se apaga o no).
+- Biot (para ver si aplica capacitancia concentrada) y Fourier (para el paso de tiempo y la estabilidad del método explícito).
+
+**Para GitHub**, guarden el prompt, esta respuesta y el script. Sus correcciones futuras pueden ir como commits separados. Cuando consigan la plantilla de la clase, ajusto el prompt a ese formato.
