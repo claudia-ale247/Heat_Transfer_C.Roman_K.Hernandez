@@ -73,26 +73,3 @@ La temperatura máxima es T₀ = T∞ + q″(1/h + L_n/k_n + L_m/k_m). Con T₀ 
 **h = 8.39 W/m²·K**
 
 Comprobación: con h = 8.3916, T₀ = 93.000 °C. Para mantenerla **estrictamente por debajo** de 93 °C se necesita h > 8.39 W/m²·K. Con h = 8.5, T₀ = 92.77 °C.
-
-## 7. Verificación (hecha por la AI)
-
-| Resultado | Método | Resultado |
-|---|---|---|
-| Las 11 temperaturas | Resistencias: R_conv = 0.2, R_n = 0.4, R_m = 0.000833 m²·K/W | T₁₀ = 45, T₆ = 105, T₀ = 105.125: coincide |
-| Balance global | q″_in = h(T₁₀ − T∞) | 150 = 5·30 = 150 W/m²: cumple |
-| Continuidad en la interfaz | Flujo en cada lado | Metal: 7200·0.0208 = 150; no metal: 10·15 = 150: cumple |
-| Condiciones de frontera | Nodos 0 y 10 | Ambas se satisfacen |
-| Residuos de las 11 ecuaciones | Código | Máximo ≈ 1×10⁻¹⁰: cumple |
-| Coherencia física | Signos y unidades | T decrece hacia el aire y las unidades son consistentes: cumple |
-
-**Qué deben reproducir a mano:** (a) los coeficientes 7200, 7210, 10 y 15; (b) la cadena de resistencias y T₀ = 105.125 °C; (c) el despeje de h = 8.39; (d) el residuo del nodo 6 con T₅ = 105.0208 y T₇ = 90. Esta verificación de la AI no sustituye su auditoría manual, y no he afirmado ningún error de la AI porque no encontré ninguno.
-
-## 8. Conexión con la adaptación (enfriamiento)
-
-Una temperatura estacionaria menor no implica un enfriamiento más rápido. Para demostrar tiempos necesitan un análisis transitorio, con estos datos y condiciones por definir:
-
-- Densidad y calor específico de cada capa (los del no metal no están en el enunciado, no los inventes).
-- Condición inicial (por ejemplo, T = 105 °C en todo el espesor) y qué pasa con el flujo de 150 W/m² (se apaga o no).
-- Biot (para ver si aplica capacitancia concentrada) y Fourier (para el paso de tiempo y la estabilidad del método explícito).
-
-**Para GitHub**, guarden el prompt, esta respuesta y el script. Sus correcciones futuras pueden ir como commits separados. Cuando consigan la plantilla de la clase, ajusto el prompt a ese formato.
