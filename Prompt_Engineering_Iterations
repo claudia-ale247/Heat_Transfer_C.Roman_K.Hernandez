@@ -1,1 +1,69 @@
+Iteración 1
+Primer prompt
+Actúa como un ingeniero principiante que prepara una solución de transferencia de calor para revisión técnica. Ayúdame a resolver el ejercicio 5-34 y documentar el proceso según la rúbrica adjunta. Explica en español, paso a paso, con ecuaciones, sustituciones y unidades.
 
+Referencias que debes utilizar
+- 092126 2.pdf: instrucciones, rúbrica y enunciado del ejercicio 5-34. Su figura continúa en la página siguiente.
+- Libreta.pdf: presentaciones recientes. Consulta especialmente la sección 5-3, conducción unidimensional estacionaria, y el método de balances de energía para formular diferencias finitas en nodos interiores, fronteras e interfaces.
+- Libreta Examen 2.pdf: conducción en paredes compuestas, resistencias térmicas y resistencia de contacto.
+Identifica las páginas o diapositivas que utilizas. Si algún contenido no es legible o no está disponible, indícalo; no inventes referencias ni instrucciones del profesor.
+
+Contexto del proyecto
+
+Trabajamos en pareja. El proyecto requiere resolver un ejercicio original y una versión adaptada para lograr calentamiento o enfriamiento más rápido, documentar los prompts y respuestas en GitHub, auditar manualmente los cálculos, entregar un reporte firmado a mano por ambos estudiantes y presentar un video de máximo 15 minutos.
+
+En esta primera etapa, resuelve únicamente el ejercicio original. No cambies sus datos. La adaptación se desarrollará después.
+
+Datos del ejercicio 5-34
+
+Una placa no metálica está unida sobre una placa de cobre–silicio ASME SB-96:
+- Metal: \(k_m=36\ \mathrm{W/(m\cdot K)}\), \(L_m=0.030\ \mathrm m\).
+- No metal: \(k_n=0.05\ \mathrm{W/(m\cdot K)}\), \(L_n=0.020\ \mathrm m\).
+- Superficie inferior del metal: flujo de calor entrante uniforme de \(q''_{\mathrm{in}}=150\ \mathrm{W/m^2}\).
+- Superficie superior del no metal: convección con aire a \(T_\infty=15^\circ\mathrm C\), con \(h=5\ \mathrm{W/(m^2\cdot K)}\).
+- Espaciamiento nodal uniforme: \(\Delta x=0.005\ \mathrm m\).
+- Límite de temperatura del metal indicado en el enunciado: \(93^\circ\mathrm C\).
+Verifica estos datos contra el archivo antes de resolver.
+
+Lo que debes calcular
+1. La temperatura en cada nodo mediante diferencias finitas.
+2. La distribución de temperatura como función de \(x\), con tabla y gráfica.
+3. Si la temperatura máxima del metal cumple el límite proporcionado por el ejercicio.
+4. El valor umbral de \(h\) para que la temperatura máxima del metal sea \(93^\circ\mathrm C\), aclarando qué condición sobre \(h\) se necesita para mantenerla estrictamente por debajo.
+Procedimiento requerido
+1. Explica el sistema físico, la dirección del calor y las incógnitas. Distingue flujo de calor \(\mathrm{W/m^2}\) de tasa de transferencia de calor \(\mathrm W\).
+2. Establece y justifica las suposiciones: estado estacionario, conducción unidimensional, conductividades constantes en cada capa, ausencia de generación interna, contacto térmico perfecto y radiación despreciable. Distingue las condiciones explícitas del enunciado de las suposiciones del modelo. Explica por qué se resuelve como estacionario y por qué usar diferencias finitas no implica que sea transitorio.
+3. Define \(x=0\) en la superficie inferior y \(x=0.050\ \mathrm m\) en la superior. Numera los nodos del 0 al 10:
+   - Nodo 0: flujo impuesto.
+   - Nodos 1–5: interior del metal.
+   - Nodo 6: interfaz, \(x=0.030\ \mathrm m\).
+   - Nodos 7–9: interior del no metal.
+   - Nodo 10: convección.
+4. Parte del balance general de energía y muestra qué términos se cancelan. Deriva detalladamente las ecuaciones para:
+   - Un nodo interior del metal.
+   - Un nodo interior del no metal.
+   - La frontera inferior.
+   - La interfaz.
+   - La frontera superior.
+   Usa volúmenes de control alrededor de los nodos, coherentes con las presentaciones. Explica los signos, las distancias y la cancelación del área. En la interfaz, conserva las conductividades diferentes; no uses automáticamente el promedio aritmético de las temperaturas vecinas.
+5. Presenta las 11 ecuaciones con sus coeficientes numéricos y resuelve el sistema. Si utilizas código, incluye código reproducible y explica cómo funciona. No sustituyas la solución por diferencias finitas por una solución exclusiva mediante resistencias térmicas.
+6. Presenta una tabla con nodo, posición, material o frontera y temperatura. Grafica \(T(x)\), señalando la interfaz y el límite de \(93^\circ\mathrm C\). Explica las pendientes en ambos materiales.
+7. Identifica la temperatura máxima del metal y responde la pregunta de cumplimiento según el límite del enunciado, sin presentar esto como una certificación normativa real del equipo.
+8. Calcula el \(h\) umbral manteniendo constantes todos los demás datos. Muestra el despeje, las unidades y comprueba el resultado sustituyéndolo.
+Verificación y auditoría
+
+Realiza una comprobación independiente mediante resistencias térmicas. Verifica también:
+- El balance global de energía.
+- La continuidad del flujo en la interfaz.
+- La satisfacción de las condiciones de frontera.
+- Los residuos de las 11 ecuaciones.
+- La coherencia física de las temperaturas y sus unidades.
+Incluye una tabla con: resultado o ecuación, método de comprobación y resultado de la verificación. Conserva suficiente precisión durante los cálculos y redondea al presentar.
+
+Esta verificación hecha por AI no sustituye la auditoría manual de los estudiantes. Identifica los cálculos que debemos reproducir a mano. No inventes errores de AI ni afirmes que nosotros ya verificamos o firmamos el trabajo. Si detectas un error en tu solución, muestra la corrección de forma transparente.
+
+Conexión con la adaptación posterior
+
+Al finalizar, explica brevemente qué faltaría para demostrar un enfriamiento más rápido mediante un análisis transitorio. No confundas una temperatura estacionaria menor con un menor tiempo de enfriamiento. No inventes densidades, calores específicos ni una identidad para el material no metálico: señala los datos adicionales que habría que obtener y las condiciones que habría que definir.
+
+Organiza la respuesta para que podamos guardar este prompt, tu solución y nuestras futuras correcciones en GitHub. Prioriza una solución comprensible y verificable, sin saltarte pasos algebraicos importantes.
