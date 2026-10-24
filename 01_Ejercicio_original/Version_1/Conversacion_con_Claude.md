@@ -130,3 +130,27 @@ Entregué los tres archivos del reporte v1 (`reporte_original_v1.md`, `ej_5_34_v
 - [Reporte original en Markdown](reporte_original_v1.md)
 - [Código de Python](ej_5_34_v1.py)
 - [Gráfica de temperaturas](T_vs_x_5_34_v1.png)
+
+## Solicitud de conversión a PDF
+
+Convierte el archivo adjunto `reporte_original_v1.docx` a PDF y entrégame el archivo descargable con el nombre `Reporte_original_v1.pdf`.
+
+Conserva exactamente el contenido original: no corrijas, resumas, elimines ni añadas información. Mantén los títulos, las tablas, las ecuaciones y la gráfica. Verifica que todo sea legible y que no haya contenido cortado o superpuesto. Esta copia se utilizará como evidencia del reporte original antes de la auditoría.
+
+## Respuesta de Claude
+Aquí está `Reporte_original_v1.pdf`, de 12 páginas tamaño carta. Lo convertí desde el `.docx` que adjuntaste, que es idéntico al que yo generé. No corregí, resumí, quité ni añadí nada.
+
+**Qué revisé**
+- Miré las 12 páginas una por una. Los títulos, las 10 tablas y las ecuaciones se ven completos y legibles, sin texto cortado ni superpuesto.
+- Los 33 títulos del original que no llevan ecuaciones aparecen en el PDF, y varios valores clave que busqué en su texto (105.1250, 8.391608, 149.76, 2.842×10⁻¹⁴) también.
+- La gráfica con su ampliación del metal está en la página 8.
+
+**Dos detalles de presentación**
+- Bajo la gráfica aparece una línea "T(x)". Ya venía en el `.docx` como pie de figura y la dejé.
+- La tabla de comprobación de h empieza en la página 10 y su frase introductoria queda al final de la 9. Es solo el salto de página.
+
+La evidencia es el PDF y coincide con el original.
+
+### Archivo entregado
+
+- [Ver reporte original en PDF](Reporte_original_v1.pdf)
