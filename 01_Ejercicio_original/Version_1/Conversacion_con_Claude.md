@@ -117,7 +117,7 @@ Al final, añade una lista breve de los cálculos que debemos contrastar con nue
 Antes de entregar, comprueba la consistencia entre el enunciado, las ecuaciones, la tabla, la gráfica, el código y las conclusiones.
 
 
-## 2. Claude — Respuesta al prompt inicial
+## 2. Respuesta de Claude al prompt inicial
 Ya terminé el informe y los archivos. Los envío ahora.
 
 Entregué los tres archivos del reporte v1 (`reporte_original_v1.md`, `ej_5_34_v1.py` y `T_vs_x_5_34_v1.png`). Ejecuté el código y los resultados del informe salen de esa ejecución. Revisé la gráfica con la ampliación del metal y comprobé que los datos coinciden con el enunciado y la Figura P5-34.
