@@ -135,30 +135,35 @@ Entregué los tres archivos del reporte v1 (`reporte_original_v1.md`, `ej_5_34_v
 - [Gráfica de temperaturas](T_vs_x_5_34_v1.png)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
-## 2. Conversión del reporte a PDF
+## 2. Conversión del reporte a DOCX Y PDF
 
-### Solicitud - Conversión a PDF
+### Solicitud - Conversión a DOCX Y PDF
 
-Convierte el archivo adjunto `reporte_original_v1.docx` a PDF y entrégame el archivo descargable con el nombre `Reporte_original_v1.pdf`.
+Convierte el reporte de la versión 1 que generaste en respuesta al prompt 1 a Word y PDF. Entrégame ambos archivos descargables con estos nombres:
 
-Conserva exactamente el contenido original: no corrijas, resumas, elimines ni añadas información. Mantén los títulos, las tablas, las ecuaciones y la gráfica. Verifica que todo sea legible y que no haya contenido cortado o superpuesto. Esta copia se utilizará como evidencia del reporte original antes de la auditoría.
+- Reporte_original_v1.docx
+- Reporte_original_v1.pdf
+
+Utiliza el contenido de reporte_original_v1.md y su gráfica correspondiente, T_vs_x_5_34_v1.png. Asegúrate de utilizar la versión 1 original, anterior a la auditoría, sin incorporar correcciones de versiones posteriores.
+
+Conserva exactamente el contenido: no corrijas, resumas, elimines ni añadas información. Mantén los títulos, las tablas, las ecuaciones y la gráfica. El documento de Word debe ser editable para poder añadir comentarios de auditoría.
+
+Genera el PDF a partir de ese mismo documento de Word para que ambos coincidan. Verifica que todo sea legible y que no haya contenido cortado o superpuesto.
+
+Estos archivos se utilizarán como evidencia del reporte de la versión 1 antes de su auditoría. No añadas comentarios ni correcciones de auditoría.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### Respuesta de Claude — Entrega del PDF
 
-Aquí está `Reporte_original_v1.pdf`, de 12 páginas tamaño carta. Lo convertí desde el `.docx` que adjuntaste, que es idéntico al que yo generé. No corregí, resumí, quité ni añadí nada.
+Te entregué `Reporte_original_v1.docx` y `Reporte_original_v1.pdf`.
 
-**Qué revisé**
-- Miré las 12 páginas una por una. Los títulos, las 10 tablas y las ecuaciones se ven completos y legibles, sin texto cortado ni superpuesto.
-- Los 33 títulos del original que no llevan ecuaciones aparecen en el PDF, y varios valores clave que busqué en su texto (105.1250, 8.391608, 149.76, 2.842×10⁻¹⁴) también.
-- La gráfica con su ampliación del metal está en la página 8.
+Estos archivos ya los había generado antes con el mismo contenido, así que no volví a convertir nada. Solo comprobé que siguen siendo los originales y copié el Word con el nombre exacto que pediste.
 
-**Dos detalles de presentación**
-- Bajo la gráfica aparece una línea "T(x)". Ya venía en el `.docx` como pie de figura y la dejé.
-- La tabla de comprobación de h empieza en la página 10 y su frase introductoria queda al final de la 9. Es solo el salto de página.
-
-La evidencia es el PDF y coincide con el original.
+- **Versión original:** el Word y el PDF salen de `reporte_original_v1.md` sin cambios. Ese archivo no menciona la v2 ni la v3, y la gráfica incrustada es `T_vs_x_5_34_v1.png`, que es el mismo archivo.
+- **Word y PDF coinciden:** el PDF lo hice a partir de este mismo `.docx` (12 páginas, tamaño carta). Revisé las páginas y no vi texto cortado ni superpuesto. Los títulos, las 10 tablas y las ecuaciones se ven completos, y la gráfica trae su ampliación del metal.
+- **Word editable:** el texto, las tablas y las ecuaciones son nativos, así que pueden añadir comentarios de auditoría. No añadí ninguno.
+- **Pendiente de verificar:** en Word, revisen que las ecuaciones se vean bien, porque aquí no tengo cómo mostrarlas en ese formato.
 
 #### Archivo entregado
 
