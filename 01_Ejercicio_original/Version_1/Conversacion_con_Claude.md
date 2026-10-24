@@ -125,3 +125,8 @@ Entregué los tres archivos del reporte v1 (`reporte_original_v1.md`, `ej_5_34_v
 - **Resultado principal:** T₀ = 105.125 °C en el nodo 0, T₆ = 105 °C en la interfaz y T₁₀ = 45 °C. El metal no cumple el límite de 93 °C. El h umbral es 1200/143 ≈ 8.3916 W/(m²·K), y con h = 8.5 la temperatura máxima es 92.772 °C.
 - **Referencias:** el informe cita las diapositivas que sí abrí, que son `Libreta.pdf` págs. 11–12 (diapositivas 13–20) y `Libreta Examen 2.pdf` págs. 2–3 (diapositivas 5–11). Declara que no usé la plantilla de GitHub (no estaba adjunta) ni `Libreta Heat Transfer examen .pdf`.
 - **Pendiente:** el contraste con sus cálculos manuales, que el informe marca como pendiente. Las verificaciones del reporte son solo de código y por resistencias.
+
+### Archivos entregados
+- [Reporte original en Markdown](reporte_original_v1.md)
+- [Código de Python](ej_5_34_v1.py)
+- [Gráfica de temperaturas](T_vs_x_5_34_v1.png)
