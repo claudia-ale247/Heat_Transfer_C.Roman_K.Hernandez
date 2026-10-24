@@ -1,22 +1,37 @@
 # Ejercicio original 5-34 — Versión 1
 
-Esta carpeta contiene el reporte inicial generado con Claude, los archivos de cálculo y la auditoría realizada para identificar correcciones y aclaraciones.
+Documentación de la primera versión del ejercicio: conversación con Claude, reporte generado, resultados y auditoría.
 
-## Reporte y auditoría
+## 1. Conversación con Claude
 
-| Documento | Contenido |
-|---|---|
-| [Reporte original en PDF](Reporte_original_v1.pdf) | Primera versión del reporte, antes de aplicar las observaciones de la auditoría. |
-| [Auditoría del reporte 1](Auditoria_del_reporte_1.pdf) | Reporte con comentarios sobre las explicaciones, la notación y el contraste con los cálculos manuales. |
+Registro del prompt inicial, las respuestas recibidas y las solicitudes de conversión de formato.
 
-## Registro de la conversación
+[Consultar la conversación completa](Archivos/Conversacion_con_Claude.md)
 
-[Ver conversación con Claude](Conversacion_con_Claude.md)
+## 2. Reporte original
 
-Incluye el prompt inicial, las respuestas y las solicitudes de conversión de formato registradas.
+Primera versión del reporte generado por Claude, antes de aplicar las observaciones de la auditoría.
 
-## Archivos de apoyo
+[Leer el reporte en PDF](Archivos/Reporte_original_v1.pdf)
 
-- [Reporte original en Markdown](reporte_original_v1.md)
-- [Código de Python](ej_5_34_v1.py)
-- [Gráfica de temperaturas](T_vs_x_5_34_v1.png)
+[Consultar el reporte en Markdown](Archivos/reporte_original_v1.md)
+
+## 3. Código y gráfica
+
+Archivos utilizados para calcular y representar las temperaturas nodales.
+
+[Consultar el código de Python](Archivos/ej_5_34_v1.py)
+
+[Ver la gráfica de temperaturas](Archivos/T_vs_x_5_34_v1.png)
+
+## 4. Auditoría del reporte
+
+Revisión con comentarios sobre errores, explicaciones que requieren aclaración y comparación con los cálculos manuales.
+
+[Leer la auditoría](Archivos/Auditoria_del_reporte_1.pdf)
+
+---
+
+## Todos los archivos
+
+[Explorar la carpeta de archivos de esta versión](Archivos/)
