@@ -1,5 +1,10 @@
 # Proyecto de Transferencia de Calor — Ejercicio 5-34
 
+**Estudiantes:**
+
+- Karina Hernández Cruz
+- Claudia Román García
+
 Este proyecto documenta la solución y revisión del ejercicio original 5-34 y el desarrollo de un ejercicio modificado. Se utilizan cálculos manuales, balances de energía, diferencias finitas y código de Python, junto con una revisión crítica de los reportes generados con Claude.
 
 El repositorio conserva los prompts, las respuestas, los reportes, las gráficas y las auditorías para mostrar el proceso de trabajo y los cambios entre versiones.
@@ -29,27 +34,27 @@ Primera respuesta de Claude y documentación de su revisión.
 
 Registro del prompt inicial, las respuestas recibidas y la solicitud de conversión a PDF.
 
-[Consultar la conversación con Claude](01_Ejercicio_original/Version_1/Archivos/Conversacion_con_Claude.md)
+[Consultar la conversación con Claude](01_Ejercicio_original/Version_1/Conversaci%C3%B3n%20con%20Claude.md)
 
 #### Reporte original
 
 Reporte generado antes de aplicar las observaciones de la auditoría.
 
-- [Consultar el reporte en PDF](01_Ejercicio_original/Version_1/Archivos/Reporte_original_v1.pdf)
-- [Consultar el reporte en Markdown](01_Ejercicio_original/Version_1/Archivos/reporte_original_v1.md)
+- [Consultar el reporte en PDF](01_Ejercicio_original/Version_1/Reporte_original_v1.pdf)
+- [Consultar el reporte en Markdown](01_Ejercicio_original/Version_1/reporte_original_v1.md)
 
 #### Código y gráfica
 
-- [Consultar el código de Python](01_Ejercicio_original/Version_1/Archivos/ej_5_34_v1.py)
-- [Abrir la gráfica de temperaturas](01_Ejercicio_original/Version_1/Archivos/T_vs_x_5_34_v1.png)
+- [Consultar el código de Python](01_Ejercicio_original/Version_1/ej_5_34_v1.py)
+- [Abrir la gráfica de temperaturas](01_Ejercicio_original/Version_1/T_vs_x_5_34_v1.png)
 
 #### Auditoría del reporte
 
 Revisión con comentarios sobre errores, aspectos que requieren aclaración y comparación de los resultados con los cálculos manuales.
 
-[Consultar la auditoría del reporte 1](01_Ejercicio_original/Version_1/Archivos/Auditoria_del_reporte_1.pdf)
+[Consultar la auditoría del reporte 1](01_Ejercicio_original/Version_1/Auditoria_del_reporte_1.pdf)
 
-[Explorar todos los archivos de la versión 1](01_Ejercicio_original/Version_1/Archivos/)
+[Explorar todos los archivos de la versión 1](01_Ejercicio_original/Version_1/)
 
 ### Versión 2 — Revisión a partir de la auditoría
 
