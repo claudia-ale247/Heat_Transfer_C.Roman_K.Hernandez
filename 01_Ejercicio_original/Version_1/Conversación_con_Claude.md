@@ -135,9 +135,9 @@ Entregué los tres archivos del reporte v1 (`reporte_original_v1.md`, `ej_5_34_v
 - [Gráfica de temperaturas](T_vs_x_5_34_v1.png)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
-## 2. Conversión del reporte a DOCX Y PDF
+## 2. Conversión del reporte a Word Y PDF
 
-### Solicitud - Conversión a DOCX Y PDF
+### Solicitud - Conversión a Word Y PDF
 
 Convierte el reporte de la versión 1 que generaste en respuesta al prompt 1 a Word y PDF. Entrégame ambos archivos descargables con estos nombres:
 
@@ -154,7 +154,7 @@ Estos archivos se utilizarán como evidencia del reporte de la versión 1 antes 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
-### Respuesta de Claude — Entrega del PDF
+### Respuesta de Claude — Entrega de Word y PDF
 
 Te entregué `Reporte_original_v1.docx` y `Reporte_original_v1.pdf`.
 
@@ -167,4 +167,7 @@ Estos archivos ya los había generado antes con el mismo contenido, así que no 
 
 #### Archivo entregado
 
-- [Ver reporte original en PDF](Reporte_original_v1.pdf)
+#### Archivos entregados
+
+- [Consultar el reporte original en PDF](Reporte_original_v1.pdf)
+- [Descargar el reporte original en Word](Reporte_original_v1.docx)
