@@ -124,7 +124,9 @@ Entregué los tres archivos de la versión 2: `reporte_original_v2.md`, `ej_5_34
 **Pendiente:** el contraste con su solución manual, que el informe marca como pendiente. Cuando lo hagan, pásame el informe v2 de nuevo para la segunda revisión, que debería ser la final.
 
 #### Archivos entregados
-
+- [Consultar el reporte en Markdown](reporte_original_v2.md)
+- [Consultar el código de Python](ej_5_34_v2.py)
+- [Ver la gráfica de temperaturas](T_vs_x_5_34_v2.png)
 
 ---
 
@@ -146,7 +148,7 @@ Genera el PDF a partir de ese mismo documento de Word para que ambos coincidan. 
 Estos archivos se utilizarán como evidencia del reporte de la versión 2 antes de su auditoría. No añadas comentarios ni correcciones de auditoría.
 ---
 
-### Respuesta de Claude — Entrega del PDF
+### Respuesta de Claude — Entrega de Word y PDF
 
 Te entregué `Reporte_original_v2.pdf` (15 páginas, tamaño carta) y `Reporte_original_v2.docx`. Convertí `reporte_original_v2.md` sin cambiar ningún contenido. Al final llegaron dos tarjetas del PDF: usa la última, que es la definitiva. La primera tenía un título de tabla suelto al final de una página.
 
@@ -157,3 +159,7 @@ Te entregué `Reporte_original_v2.pdf` (15 páginas, tamaño carta) y `Reporte_o
   
 #### Archivo entregado
 
+#### Archivos entregados
+
+- [Consultar el reporte en PDF](Reporte_original_v2.pdf)
+- [Descargar el reporte editable en Word](Reporte_original_v2.docx)
