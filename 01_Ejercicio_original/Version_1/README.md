@@ -22,7 +22,6 @@ Código de Python y gráfica correspondientes a la solución del ejercicio.
 - [Consultar el código de Python](Archivos/ej_5_34_v1.py)
 - [Abrir la gráfica de temperaturas](Archivos/T_vs_x_5_34_v1.png)
 
-![Gráfica de temperaturas del ejercicio 5-34](Archivos/T_vs_x_5_34_v1.png)
 
 ## 4. Auditoría del reporte
 
