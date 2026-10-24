@@ -1,7 +1,9 @@
 # Conversación con Claude — Versión 1
 Registro de los mensajes utilizados para generar el reporte original y solicitar sus formatos de entrega. Los archivos resultantes se encuentran en esta misma carpeta.
 
-## Prompt 1 - Ejercicio original 5-34
+## 1. Generación del reporte original
+
+### Prompt 1 - Ejercicio original 5-34
 
 Somos dos estudiantes de Ingeniería Química trabajando como ingenieras principiantes en un proyecto de Transferencia de Calor. Ayúdanos a preparar la primera versión del informe técnico del ejercicio original 5-34. Esta versión será comparada con nuestros cálculos manuales antes de preparar el informe final.
 
@@ -116,8 +118,9 @@ Al final, añade una lista breve de los cálculos que debemos contrastar con nue
 
 Antes de entregar, comprueba la consistencia entre el enunciado, las ecuaciones, la tabla, la gráfica, el código y las conclusiones.
 
+------------------------------------------------------------------------------------------------------------------------------------------------
 
-## 2. Respuesta de Claude al prompt inicial
+### Respuesta de Claude - Reporte original 
 Ya terminé el informe y los archivos. Los envío ahora.
 
 Entregué los tres archivos del reporte v1 (`reporte_original_v1.md`, `ej_5_34_v1.py` y `T_vs_x_5_34_v1.png`). Ejecuté el código y los resultados del informe salen de esa ejecución. Revisé la gráfica con la ampliación del metal y comprobé que los datos coinciden con el enunciado y la Figura P5-34.
@@ -126,18 +129,24 @@ Entregué los tres archivos del reporte v1 (`reporte_original_v1.md`, `ej_5_34_v
 - **Referencias:** el informe cita las diapositivas que sí abrí, que son `Libreta.pdf` págs. 11–12 (diapositivas 13–20) y `Libreta Examen 2.pdf` págs. 2–3 (diapositivas 5–11). Declara que no usé la plantilla de GitHub (no estaba adjunta) ni `Libreta Heat Transfer examen .pdf`.
 - **Pendiente:** el contraste con sus cálculos manuales, que el informe marca como pendiente. Las verificaciones del reporte son solo de código y por resistencias.
 
-### Archivos entregados
+#### Archivos entregados
 - [Reporte original en Markdown](reporte_original_v1.md)
 - [Código de Python](ej_5_34_v1.py)
 - [Gráfica de temperaturas](T_vs_x_5_34_v1.png)
 
-## Solicitud de conversión a PDF
+------------------------------------------------------------------------------------------------------------------------------------------------
+## 2. Conversión del reporte a PDF
+
+### Solicitud - Conversión a PDF
 
 Convierte el archivo adjunto `reporte_original_v1.docx` a PDF y entrégame el archivo descargable con el nombre `Reporte_original_v1.pdf`.
 
 Conserva exactamente el contenido original: no corrijas, resumas, elimines ni añadas información. Mantén los títulos, las tablas, las ecuaciones y la gráfica. Verifica que todo sea legible y que no haya contenido cortado o superpuesto. Esta copia se utilizará como evidencia del reporte original antes de la auditoría.
 
-## Respuesta de Claude
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Respuesta de Claude — Entrega del PDF
+
 Aquí está `Reporte_original_v1.pdf`, de 12 páginas tamaño carta. Lo convertí desde el `.docx` que adjuntaste, que es idéntico al que yo generé. No corregí, resumí, quité ni añadí nada.
 
 **Qué revisé**
@@ -151,6 +160,6 @@ Aquí está `Reporte_original_v1.pdf`, de 12 páginas tamaño carta. Lo convert�
 
 La evidencia es el PDF y coincide con el original.
 
-### Archivo entregado
+#### Archivo entregado
 
 - [Ver reporte original en PDF](Reporte_original_v1.pdf)
