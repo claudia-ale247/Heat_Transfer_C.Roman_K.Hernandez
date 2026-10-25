@@ -194,7 +194,6 @@ La solución manual y el reporte final de Claude coinciden en las temperaturas n
 
 El análisis demuestra que las condiciones originales producen una temperatura máxima superior al límite indicado. Aumentar el coeficiente de convección por encima del umbral calculado permite reducir la temperatura máxima estacionaria por debajo de 93 °C.
 
-Este resultado describe el estado estacionario. Por sí solo, no determina el tiempo necesario para calentar o enfriar el sistema.
 
 ## 3. Ejercicio modificado
 
