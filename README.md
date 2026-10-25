@@ -44,7 +44,7 @@ Las conversaciones individuales registran los prompts enviados, las respuestas r
 | Versión 3 | [Consultar prompt 3, ajustes adicionales y respuestas](01_Ejercicio_original/Version_3/Conversacion_con_Claude.md) |
 | Conversación global | [Consultar documento de recopilación](01_Ejercicio_original/Conversacion_completa_con_Claude.md) |
 
-**Estado de la conversación global:** el documento está creado, pero su recopilación está pendiente de completar. Las interacciones se pueden consultar en las conversaciones individuales.
+**Estado de la conversación global:** La conversación global reúne los prompts, las respuestas y los enlaces a los archivos de las tres versiones. Las conversaciones individuales también se conservan en sus respectivas carpetas.
 
 ## 4. Versión 1 — Reporte inicial y primera auditoría
 
