@@ -5,99 +5,120 @@
 - Karina Hernández Cruz
 - Claudia Román García
 
-Este proyecto documenta la solución y revisión del ejercicio original 5-34 y el desarrollo de un ejercicio modificado. Se utilizan cálculos manuales, balances de energía, diferencias finitas y código de Python, junto con una revisión crítica de los reportes generados con Claude.
+Este proyecto documenta la solución del ejercicio original 5-34, la revisión de los reportes generados con Claude y el desarrollo de un ejercicio modificado. Se utilizan balances de energía, cálculos manuales, diferencias finitas y código de Python.
 
-El repositorio conserva los prompts, las respuestas, los reportes, las gráficas y las auditorías para mostrar el proceso de trabajo y los cambios entre versiones.
+El repositorio conserva los prompts, las respuestas, los reportes, los códigos, las gráficas y las auditorías para mostrar el proceso de trabajo y las mejoras entre versiones.
 
-## 1. Proceso de trabajo
+## 1. Organización del repositorio
+
+La documentación del ejercicio original puede consultarse de dos maneras:
+
+- **Conversación completa con Claude:** reúne cronológicamente los prompts, las respuestas y los enlaces a los archivos entregados durante las distintas versiones.
+- **Carpetas por versión:** contienen la conversación individual y los archivos correspondientes a esa etapa: reportes, código, gráfica y auditoría, cuando aplica.
+
+Las auditorías realizadas por las estudiantes se presentan como documentos separados. Las observaciones enviadas posteriormente a Claude se conservan dentro de los prompts correspondientes.
+
+## 2. Proceso de trabajo
 
 1. Analizar el enunciado y el material discutido en clase.
-2. Resolver el ejercicio manualmente.
-3. Preparar el prompt inicial y obtener el reporte, el código y la gráfica.
-4. Auditar el reporte: identificar errores, términos que requieren explicación, información insuficiente y diferencias respecto al procedimiento de clase.
+2. Resolver el ejercicio mediante cálculos manuales.
+3. Preparar el prompt inicial y solicitar el reporte, el código y la gráfica.
+4. Auditar las respuestas para identificar errores, explicaciones incompletas, términos que requieren aclaración y diferencias respecto al procedimiento de clase.
 5. Comparar los resultados con los cálculos manuales.
-6. Preparar nuevos prompts a partir de las observaciones y revisar las versiones corregidas.
+6. Solicitar y verificar las correcciones mediante nuevos prompts.
 7. Desarrollar el ejercicio modificado y documentar sus resultados.
 8. Comparar ambos ejercicios y presentar las conclusiones.
 
-## 2. Ejercicio original
+## 3. Ejercicio original
 
 El ejercicio original estudia la conducción unidimensional en estado estacionario a través de una pared compuesta. Se determina la distribución de temperaturas, se evalúa el límite de temperatura del metal y se calcula el coeficiente de convección requerido.
 
 [Explorar la carpeta del ejercicio original](01_Ejercicio_original/)
 
-### Versión 1 — Reporte inicial y auditoría
+### Conversación completa con Claude
 
-Primera respuesta de Claude y documentación de su revisión.
+Este documento reúne las interacciones de las distintas versiones en orden cronológico. La conversación de la versión 3 se incorporará al completar su documentación.
 
-#### Conversación con Claude
+[Leer la conversación completa con Claude](01_Ejercicio_original/Conversacion_completa_con_Claude.md)
 
-Registro del prompt inicial, las respuestas recibidas y la solicitud de conversión a PDF.
+Las conversaciones individuales también se conservan dentro de las carpetas de cada versión y pueden consultarse mediante los enlaces siguientes.
 
-[Consultar la conversación con Claude](01_Ejercicio_original/Version_1/Conversaci%C3%B3n%20con%20Claude.md)
+### Versión 1 — Reporte inicial y primera auditoría
 
-#### Reporte original
+Primera versión del reporte generado con Claude, conservada junto con los archivos entregados y la auditoría que dio origen a las solicitudes del prompt 2.
 
-Reporte generado antes de aplicar las observaciones de la auditoría.
-
-- [Consultar el reporte en PDF](01_Ejercicio_original/Version_1/Reporte_original_v1.pdf)
-- [Consultar el reporte en Markdown](01_Ejercicio_original/Version_1/reporte_original_v1.md)
-
-#### Código y gráfica
-
-- [Consultar el código de Python](01_Ejercicio_original/Version_1/ej_5_34_v1.py)
-- [Abrir la gráfica de temperaturas](01_Ejercicio_original/Version_1/T_vs_x_5_34_v1.png)
-
-#### Auditoría del reporte
-
-Revisión con comentarios sobre errores, aspectos que requieren aclaración y comparación de los resultados con los cálculos manuales.
-
-[Consultar la auditoría del reporte 1](01_Ejercicio_original/Version_1/Auditoria_del_reporte_1.pdf)
+| Documento | Acceso |
+| --- | --- |
+| Conversación individual | [Prompt 1 y respuestas de Claude](01_Ejercicio_original/Version_1/Conversaci%C3%B3n_con_Claude.md) |
+| Reporte en PDF | [Leer reporte 1](01_Ejercicio_original/Version_1/Reporte_original_v1.pdf) |
+| Reporte en Word | [Consultar documento editable](01_Ejercicio_original/Version_1/Reporte_original_v1.docx) |
+| Reporte en Markdown | [Leer reporte en Markdown](01_Ejercicio_original/Version_1/reporte_original_v1.md) |
+| Código de Python | [Consultar código](01_Ejercicio_original/Version_1/ej_5_34_v1.py) |
+| Gráfica de temperaturas | [Ver gráfica](01_Ejercicio_original/Version_1/T_vs_x_5_34_v1.png) |
+| Auditoría del reporte 1 | [Leer documento con anotaciones](01_Ejercicio_original/Version_1/Auditoria_del_reporte_1.pdf) |
 
 [Explorar todos los archivos de la versión 1](01_Ejercicio_original/Version_1/)
 
-### Versión 2 — Revisión a partir de la auditoría
+### Versión 2 — Reporte revisado y segunda auditoría
 
-Esta sección reunirá el prompt 2, la respuesta de Claude y los archivos de la segunda versión. Se documentarán las correcciones realizadas y las observaciones que todavía requieran atención.
+Segunda versión del reporte, solicitada a partir de las observaciones de la primera auditoría. Incluye mejoras en las explicaciones, la notación y la presentación de los resultados.
+
+La segunda auditoría documenta las observaciones adicionales utilizadas para solicitar los ajustes de la versión 3.
+
+| Documento | Acceso |
+| --- | --- |
+| Conversación individual | [Prompt 2 y respuestas de Claude](01_Ejercicio_original/Version_2/Conversacion_con_Claude.md) |
+| Reporte en PDF | [Leer reporte 2](01_Ejercicio_original/Version_2/Reporte_original_v2.pdf) |
+| Reporte en Word | [Consultar documento editable](01_Ejercicio_original/Version_2/Reporte_original_v2.docx) |
+| Reporte en Markdown | [Leer reporte en Markdown](01_Ejercicio_original/Version_2/reporte_original_v2.md) |
+| Código de Python | [Consultar código](01_Ejercicio_original/Version_2/ej_5_34_v2.py) |
+| Gráfica de temperaturas | [Ver gráfica](01_Ejercicio_original/Version_2/T_vs_x_5_34_v2.png) |
+| Auditoría del reporte 2 | [Leer documento con anotaciones](01_Ejercicio_original/Version_2/Auditoria_del_reporte_2.pdf) |
+
+[Explorar todos los archivos de la versión 2](01_Ejercicio_original/Version_2/)
+
+### Versión 3 — Reporte final
+
+Versión destinada a reunir los ajustes derivados de la segunda auditoría y la confirmación de la comparación con los cálculos manuales.
 
 **Estado:** pendiente de incorporar al repositorio.
 
-### Versiones posteriores
-
-Si la revisión requiere ajustes adicionales, se incorporarán nuevas versiones con sus respectivos prompts, respuestas y archivos.
+| Documentación | Estado |
+| --- | --- |
+| Conversación individual: prompt 3, respuestas y ajustes adicionales | Pendiente de incorporar |
+| Reporte final en PDF, Word y Markdown | Pendiente de incorporar |
+| Código y gráfica correspondientes a la versión final | Pendientes de incorporar |
+| Documentación de la verificación final | Pendiente de incorporar |
 
 ### Cálculos manuales
 
-El documento organizado de los cálculos manuales se incorporará como evidencia de la comprobación independiente de los resultados.
+Las estudiantes realizaron la comprobación manual y confirmaron la concordancia de los resultados. El documento organizado de los cálculos se incorporará como evidencia del procedimiento utilizado.
+
+**Estado del documento:** pendiente de incorporar al repositorio.
+
+## 4. Ejercicio modificado
+
+Esta parte documentará las modificaciones propuestas al ejercicio original, su justificación y su efecto sobre los resultados. Se especificarán los datos, las condiciones y las suposiciones del nuevo planteamiento.
 
 **Estado:** pendiente de incorporar al repositorio.
-
-## 3. Ejercicio modificado
-
-Esta sección documentará los cambios propuestos al ejercicio original, su justificación y el análisis correspondiente.
-
-Se especificarán los datos, las condiciones y las suposiciones del modelo. Si se evalúa un calentamiento o enfriamiento más rápido, se analizará la evolución de la temperatura con el tiempo.
 
 ### Versión 1 — Desarrollo inicial
 
-Incluirá el planteamiento del ejercicio modificado, el prompt inicial, la respuesta de Claude, el reporte, el código, las gráficas y la revisión correspondiente.
-
-**Estado:** pendiente de incorporar al repositorio.
+Incluirá el planteamiento del ejercicio modificado, la conversación con Claude, el reporte inicial, el código, las gráficas y la auditoría correspondiente.
 
 ### Versión 2 — Revisión y mejoras
 
-Incluirá las correcciones derivadas de la auditoría de la primera versión y la comprobación de los resultados actualizados.
+Incluirá las correcciones solicitadas a partir de la primera auditoría, la conversación correspondiente, los archivos actualizados y la comprobación de los resultados.
 
-**Estado:** pendiente de incorporar al repositorio.
-
-## 4. Comparación y conclusiones
+## 5. Comparación y conclusiones
 
 La comparación final presentará:
 
-- Los cambios entre el ejercicio original y el modificado.
-- El efecto de esos cambios sobre los resultados.
+- Las diferencias entre el ejercicio original y el modificado.
+- El efecto de los cambios sobre los resultados.
 - La concordancia entre los cálculos manuales y computacionales.
-- Los errores y las limitaciones identificados en las respuestas de Claude.
-- Las mejoras realizadas mediante las auditorías y los prompts posteriores.
+- Los errores, las explicaciones incompletas y las limitaciones identificadas durante las auditorías.
+- Las mejoras incorporadas mediante los prompts posteriores.
+- Las conclusiones del proyecto.
 
 **Estado:** pendiente de incorporar al repositorio.
