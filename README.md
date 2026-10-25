@@ -14,8 +14,8 @@ El repositorio reúne cálculos manuales, conversaciones con Claude, reportes, c
 | Parte | Contenido | Estado |
 | --- | --- | --- |
 | Ejercicio original | Solución manual, tres versiones del reporte, conversaciones, código, gráficas, auditorías y reporte firmado | Finalizado; versión 3 aprobada por las estudiantes |
-| Ejercicio modificado | Análisis transitorio, adaptación de materiales, espesor y convección, y comparación de enfriamiento | En desarrollo; documentación pendiente de incorporar |
-| Comparación final | Evaluación de la mejora y sus condiciones de validez | Pendiente de completar |
+| Ejercicio modificado | Análisis transitorio, cambios de material, espesor y convección, y comparación de enfriamiento | Primera versión generada; en proceso de auditoría e incorporación al repositorio |
+| Comparación final | Evaluación de la mejora y sus condiciones de validez | Pendiente de completar con los resultados finales revisados |
 
 ### Acceso a los documentos principales
 
@@ -196,8 +196,6 @@ La caída de temperatura en el metal es de **0.125 °C**, mientras que en la pla
 
 La mayor caída ocurre en la placa no metálica porque su resistencia térmica a la conducción es mucho mayor. Por eso, el perfil del metal parece casi horizontal en la gráfica general; la ampliación permite observar su pequeña disminución de temperatura.
 
-![Distribución de temperatura del ejercicio original](01_Ejercicio_original/Version_3/T_vs_x_5_34_v3.png)
-
 #### Evaluación del límite de 93 °C
 
 El ejercicio requiere evaluar el límite térmico; no presupone que las condiciones originales deban cumplirlo.
@@ -223,7 +221,7 @@ Las tres versiones documentan la revisión progresiva del reporte. La versión 3
 
 ## 3. Ejercicio modificado
 
-**Estado: en desarrollo; reportes, auditorías y archivos pendientes de incorporar al repositorio.**
+**Estado: primera versión generada y en proceso de auditoría. La documentación se incorporará al repositorio conforme se organice y revise.**
 
 Esta etapa amplía el ejercicio original mediante un análisis transitorio y una adaptación orientada a reducir el tiempo de enfriamiento.
 
@@ -238,29 +236,31 @@ Esta etapa amplía el ejercicio original mediante un análisis transitorio y una
 | Coeficiente de convección | 5 W/(m²·K) | 25 W/(m²·K) |
 | Temperatura del aire | 15 °C | 15 °C |
 
-La propuesta combina tres cambios: material de la capa superior, espesor y convección. La mejora se evaluará como resultado de esa combinación.
+La propuesta combina tres cambios: material de la capa superior, espesor y convección. La mejora se evalúa como resultado de esa combinación.
 
-Las propiedades adicionales necesarias para calcular tiempos, sus fuentes y los supuestos del modelo se documentarán en el reporte del ejercicio modificado.
+Las propiedades adicionales necesarias para calcular tiempos, sus fuentes y los supuestos del modelo se documentan en el reporte del ejercicio modificado.
 
-### 3.2. Pruebas que se desarrollarán
+### 3.2. Pruebas de calentamiento y enfriamiento
 
 #### Calentamiento
 
 Ambos sistemas comienzan uniformemente a 15 °C y reciben un flujo de calor de 150 W/m² por la superficie inferior.
 
-Se estudiarán la evolución de las temperaturas, el tiempo para completar el 95 % del aumento de temperatura y el cumplimiento del límite térmico de 93 °C.
+Se estudian la evolución de las temperaturas, el tiempo para completar el 95 % del aumento de temperatura y el cumplimiento del límite térmico de 93 °C.
 
 #### Enfriamiento
 
-Se realizará una prueba independiente con ambos sistemas inicialmente a 90 °C, el calentamiento apagado y aire a 15 °C.
+Se realiza una prueba independiente con ambos sistemas inicialmente a 90 °C, el calentamiento apagado y aire a 15 °C.
 
-Se comparará el tiempo necesario para que la temperatura máxima de cada sistema disminuya hasta 60 °C. Cada configuración conservará sus materiales, espesores y coeficiente de convección.
+La superficie inferior se considera adiabática. Se compara el tiempo necesario para que la temperatura máxima de cada sistema disminuya hasta 60 °C. Cada configuración conserva sus materiales, espesores y coeficiente de convección.
 
-Esta comparación permitirá evaluar directamente el enfriamiento bajo temperaturas inicial y objetivo comunes.
+Esta comparación permite evaluar directamente el enfriamiento bajo temperaturas inicial y objetivo comunes.
 
 ### 3.3. Proceso de trabajo y documentación
 
-El ejercicio modificado tendrá su propia numeración de versiones, comenzando por la versión 1.
+El ejercicio modificado tiene su propia numeración de versiones, comenzando por la versión 1.
+
+La primera entrega se revisa para comprobar los cálculos y detectar explicaciones que requieren corrección o mayor claridad. Las observaciones de la auditoría servirán para preparar la siguiente versión.
 
 Se conservarán:
 
@@ -273,19 +273,19 @@ Se conservarán:
 - Las auditorías y las correcciones.
 - El reporte final aprobado y firmado.
 
-Los enlaces se incorporarán cuando los archivos estén disponibles.
+Los enlaces se incorporarán cuando los archivos estén disponibles en el repositorio.
 
 ### 3.4. Verificación e interpretación
 
-Se distinguirán las aproximaciones analíticas de los resultados numéricos. También se documentarán las comprobaciones de estabilidad, convergencia y balance de energía.
+Se distinguen las aproximaciones analíticas de los resultados numéricos. También se documentan las comprobaciones de estabilidad, convergencia y balance de energía.
 
 La comparación manual se presentará en una tabla independiente de la del ejercicio original. No se identificará una versión como aprobada hasta completar su revisión y documentar la confirmación de las estudiantes.
 
-Los resultados finales de esta etapa se incorporarán después de revisar el reporte y sus cálculos.
+Los resultados finales de esta etapa se incorporarán después de revisar el reporte y completar la verificación correspondiente.
 
 ## 4. Comparación final del proyecto
 
-**Estado: pendiente de completar con los resultados revisados del ejercicio modificado.**
+**Estado: pendiente de completar con los resultados finales revisados del ejercicio modificado.**
 
 La comparación explicará:
 
@@ -295,7 +295,7 @@ La comparación explicará:
 - Cuánto se redujo el tiempo de enfriamiento entre las temperaturas comunes seleccionadas.
 - Bajo qué supuestos y condiciones es válida la mejora.
 
-El ejercicio original aporta la solución estacionaria de referencia. Su extensión transitoria, denominada caso A, permitirá comparar tiempos con el caso B modificado.
+El ejercicio original aporta la solución estacionaria de referencia. Su extensión transitoria, denominada caso A, permite comparar tiempos con el caso B modificado.
 
 Una temperatura estacionaria menor no se utilizará, por sí sola, como prueba de un enfriamiento más rápido.
 
