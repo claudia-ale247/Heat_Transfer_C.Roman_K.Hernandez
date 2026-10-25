@@ -12,7 +12,6 @@ Registro del prompt inicial, la respuesta de Claude y los archivos entregados pa
 
 Aquí tienes el **prompt 2 completo y corregido**. Reconoce los cálculos manuales que ustedes ya realizaron y distingue los análisis adicionales.
 
-```text
 Prepara la VERSIÓN 2 del reporte del ejercicio modificado 5-34. Parte de la versión 1 e incorpora las observaciones de auditoría que se detallan abajo.
 
 Entrega el reporte completo actualizado, no solamente una lista de cambios. Conserva el desarrollo y los resultados correctos; corrige las explicaciones, completa las fuentes y documenta adecuadamente la verificación manual ya realizada.
@@ -430,7 +429,6 @@ No inventes consultas, ejecuciones, firmas, aprobaciones ni verificaciones.
 Si no puedes generar un archivo o realizar una comprobación, indícalo claramente.
 
 Prepara ahora la versión 2 completa siguiendo estas instrucciones.
-```
 
 ---
 
