@@ -5,120 +5,135 @@
 - Karina Hernández Cruz
 - Claudia Román García
 
-Este proyecto documenta la solución del ejercicio original 5-34, la revisión de los reportes generados con Claude y el desarrollo de un ejercicio modificado. Se utilizan balances de energía, cálculos manuales, diferencias finitas y código de Python.
+Este repositorio documenta la solución del ejercicio original 5-34 y el proceso de generación, revisión y corrección de reportes mediante Claude. Incluye los cálculos manuales, los prompts, las respuestas, los reportes, el código de Python, las gráficas y las auditorías.
 
-El repositorio conserva los prompts, las respuestas, los reportes, los códigos, las gráficas y las auditorías para mostrar el proceso de trabajo y las mejoras entre versiones.
+El ejercicio estudia la conducción unidimensional en estado estacionario a través de una pared compuesta. Se determina la distribución de temperaturas, se compara la temperatura máxima del metal con el límite indicado en el enunciado y se calcula el coeficiente de convección requerido.
 
-## 1. Organización del repositorio
-
-La documentación del ejercicio original puede consultarse de dos maneras:
-
-- **Conversación completa con Claude:** reúne cronológicamente los prompts, las respuestas y los enlaces a los archivos entregados durante las distintas versiones.
-- **Carpetas por versión:** contienen la conversación individual y los archivos correspondientes a esa etapa: reportes, código, gráfica y auditoría, cuando aplica.
-
-Las auditorías realizadas por las estudiantes se presentan como documentos separados. Las observaciones enviadas posteriormente a Claude se conservan dentro de los prompts correspondientes.
-
-## 2. Proceso de trabajo
-
-1. Analizar el enunciado y el material discutido en clase.
-2. Resolver el ejercicio mediante cálculos manuales.
-3. Preparar el prompt inicial y solicitar el reporte, el código y la gráfica.
-4. Auditar las respuestas para identificar errores, explicaciones incompletas, términos que requieren aclaración y diferencias respecto al procedimiento de clase.
-5. Comparar los resultados con los cálculos manuales.
-6. Solicitar y verificar las correcciones mediante nuevos prompts.
-7. Desarrollar el ejercicio modificado y documentar sus resultados.
-8. Comparar ambos ejercicios y presentar las conclusiones.
-
-## 3. Ejercicio original
-
-El ejercicio original estudia la conducción unidimensional en estado estacionario a través de una pared compuesta. Se determina la distribución de temperaturas, se evalúa el límite de temperatura del metal y se calcula el coeficiente de convección requerido.
-
-[Explorar la carpeta del ejercicio original](01_Ejercicio_original/)
-
-### Conversación completa con Claude
-
-Este documento reúne las interacciones de las distintas versiones en orden cronológico. La conversación de la versión 3 se incorporará al completar su documentación.
-
-[Leer la conversación completa con Claude](01_Ejercicio_original/Conversacion_completa_con_Claude.md)
-
-Las conversaciones individuales también se conservan dentro de las carpetas de cada versión y pueden consultarse mediante los enlaces siguientes.
-
-### Versión 1 — Reporte inicial y primera auditoría
-
-Primera versión del reporte generado con Claude, conservada junto con los archivos entregados y la auditoría que dio origen a las solicitudes del prompt 2.
+## 1. Acceso directo a los documentos principales
 
 | Documento | Acceso |
 | --- | --- |
-| Conversación individual | [Prompt 1 y respuestas de Claude](01_Ejercicio_original/Version_1/Conversaci%C3%B3n_con_Claude.md) |
+| Reporte final aprobado y firmado | [Leer documento firmado](01_Ejercicio_original/Version_3/Reporte_original_v3_aprobado_y_firmado.pdf) |
+| Auditoría del reporte final | [Consultar auditoría de la versión 3](01_Ejercicio_original/Version_3/Auditoria_del_reporte_3.pdf) |
+| Cálculos manuales | [Consultar desarrollo manual](01_Ejercicio_original/Calculo_manual_Ejercicio_original_5_34.pdf) |
+| Reporte final editable | [Descargar documento de Word](01_Ejercicio_original/Version_3/Reporte_original_v3.docx) |
+| Archivos del ejercicio original | [Explorar carpeta](01_Ejercicio_original/) |
+
+## 2. Organización y proceso de trabajo
+
+La documentación se organiza en tres versiones para conservar el desarrollo del trabajo y las correcciones realizadas.
+
+1. **Versión 1:** reporte inicial generado con Claude y primera auditoría.
+2. **Versión 2:** reporte revisado a partir de las observaciones iniciales y segunda auditoría.
+3. **Versión 3:** reporte final actualizado, auditoría final y copia aprobada y firmada.
+
+Cada carpeta conserva su conversación individual con Claude, los reportes en PDF, Word y Markdown, el código de Python, la gráfica y la auditoría correspondiente.
+
+Los cálculos manuales se encuentran directamente en la carpeta del ejercicio original porque sirven como referencia para las distintas versiones.
+
+Las auditorías documentan la revisión de los cálculos, las unidades, las explicaciones, la terminología y la coherencia con el material discutido en clase. Se presentan como documentos separados de las conversaciones con Claude.
+
+## 3. Conversaciones con Claude
+
+Las conversaciones individuales registran los prompts enviados, las respuestas recibidas y los enlaces a los archivos entregados en cada versión.
+
+| Conversación | Acceso |
+| --- | --- |
+| Versión 1 | [Consultar prompt 1 y respuestas](01_Ejercicio_original/Version_1/Conversaci%C3%B3n_con_Claude.md) |
+| Versión 2 | [Consultar prompt 2 y respuestas](01_Ejercicio_original/Version_2/Conversacion_con_Claude.md) |
+| Versión 3 | [Consultar prompt 3, ajustes adicionales y respuestas](01_Ejercicio_original/Version_3/Conversacion_con_Claude.md) |
+| Conversación global | [Consultar documento de recopilación](01_Ejercicio_original/Conversacion_completa_con_Claude.md) |
+
+**Estado de la conversación global:** el documento está creado, pero su recopilación está pendiente de completar. Las interacciones se pueden consultar en las conversaciones individuales.
+
+## 4. Versión 1 — Reporte inicial y primera auditoría
+
+Primera entrega del ejercicio original. Se conserva como evidencia del contenido generado antes de aplicar las correcciones solicitadas a partir de la auditoría.
+
+| Archivo | Acceso |
+| --- | --- |
+| Conversación con Claude | [Leer conversación](01_Ejercicio_original/Version_1/Conversaci%C3%B3n_con_Claude.md) |
 | Reporte en PDF | [Leer reporte 1](01_Ejercicio_original/Version_1/Reporte_original_v1.pdf) |
-| Reporte en Word | [Consultar documento editable](01_Ejercicio_original/Version_1/Reporte_original_v1.docx) |
+| Reporte en Word | [Descargar documento editable](01_Ejercicio_original/Version_1/Reporte_original_v1.docx) |
 | Reporte en Markdown | [Leer reporte en Markdown](01_Ejercicio_original/Version_1/reporte_original_v1.md) |
 | Código de Python | [Consultar código](01_Ejercicio_original/Version_1/ej_5_34_v1.py) |
 | Gráfica de temperaturas | [Ver gráfica](01_Ejercicio_original/Version_1/T_vs_x_5_34_v1.png) |
 | Auditoría del reporte 1 | [Leer documento con anotaciones](01_Ejercicio_original/Version_1/Auditoria_del_reporte_1.pdf) |
 
-[Explorar todos los archivos de la versión 1](01_Ejercicio_original/Version_1/)
+[Explorar la carpeta de la versión 1](01_Ejercicio_original/Version_1/)
 
-### Versión 2 — Reporte revisado y segunda auditoría
+## 5. Versión 2 — Reporte revisado y segunda auditoría
 
-Segunda versión del reporte, solicitada a partir de las observaciones de la primera auditoría. Incluye mejoras en las explicaciones, la notación y la presentación de los resultados.
+Segunda entrega, elaborada a partir de las observaciones de la primera auditoría. Incorpora correcciones y aclaraciones en el desarrollo y la presentación del reporte.
 
-La segunda auditoría documenta las observaciones adicionales utilizadas para solicitar los ajustes de la versión 3.
+La segunda auditoría documenta las observaciones utilizadas para solicitar los ajustes de la versión 3.
 
-| Documento | Acceso |
+| Archivo | Acceso |
 | --- | --- |
-| Conversación individual | [Prompt 2 y respuestas de Claude](01_Ejercicio_original/Version_2/Conversacion_con_Claude.md) |
+| Conversación con Claude | [Leer conversación](01_Ejercicio_original/Version_2/Conversacion_con_Claude.md) |
 | Reporte en PDF | [Leer reporte 2](01_Ejercicio_original/Version_2/Reporte_original_v2.pdf) |
-| Reporte en Word | [Consultar documento editable](01_Ejercicio_original/Version_2/Reporte_original_v2.docx) |
+| Reporte en Word | [Descargar documento editable](01_Ejercicio_original/Version_2/Reporte_original_v2.docx) |
 | Reporte en Markdown | [Leer reporte en Markdown](01_Ejercicio_original/Version_2/reporte_original_v2.md) |
 | Código de Python | [Consultar código](01_Ejercicio_original/Version_2/ej_5_34_v2.py) |
 | Gráfica de temperaturas | [Ver gráfica](01_Ejercicio_original/Version_2/T_vs_x_5_34_v2.png) |
 | Auditoría del reporte 2 | [Leer documento con anotaciones](01_Ejercicio_original/Version_2/Auditoria_del_reporte_2.pdf) |
 
-[Explorar todos los archivos de la versión 2](01_Ejercicio_original/Version_2/)
+[Explorar la carpeta de la versión 2](01_Ejercicio_original/Version_2/)
 
-### Versión 3 — Reporte final
+## 6. Versión 3 — Reporte final, auditoría y aprobación
 
-Versión destinada a reunir los ajustes derivados de la segunda auditoría y la confirmación de la comparación con los cálculos manuales.
+La versión 3 incorpora los ajustes solicitados después de la segunda auditoría:
 
-**Estado:** pendiente de incorporar al repositorio.
+- Corrección de la descripción de la disminución de temperatura a través del metal.
+- Aclaración de que las diferencias numéricas de punto flotante informadas corresponden a la ejecución realizada.
+- Actualización del estado de las comprobaciones manuales confirmadas por las estudiantes.
+- Distinción entre la verificación manual de las estudiantes y las comprobaciones computacionales de Claude.
 
-| Documentación | Estado |
+Se realizó una actualización adicional dentro de esta misma versión para registrar la confirmación de los cálculos manuales, conservando la denominación de versión 3.
+
+Los reportes en PDF, Word y Markdown corresponden a la última entrega actualizada. El código y la gráfica se conservaron de la primera entrega de esta versión, según lo registrado en la conversación.
+
+| Archivo | Acceso |
 | --- | --- |
-| Conversación individual: prompt 3, respuestas y ajustes adicionales | Pendiente de incorporar |
-| Reporte final en PDF, Word y Markdown | Pendiente de incorporar |
-| Código y gráfica correspondientes a la versión final | Pendientes de incorporar |
-| Documentación de la verificación final | Pendiente de incorporar |
+| Conversación con Claude | [Leer prompt 3 y actualización posterior](01_Ejercicio_original/Version_3/Conversacion_con_Claude.md) |
+| Reporte final en PDF | [Leer reporte 3](01_Ejercicio_original/Version_3/Reporte_original_v3.pdf) |
+| Reporte final en Word | [Descargar documento editable](01_Ejercicio_original/Version_3/Reporte_original_v3.docx) |
+| Reporte final en Markdown | [Leer reporte en Markdown](01_Ejercicio_original/Version_3/reporte_original_v3.md) |
+| Código de Python | [Consultar código](01_Ejercicio_original/Version_3/ej_5_34_v3.py) |
+| Gráfica de temperaturas | [Ver gráfica](01_Ejercicio_original/Version_3/T_vs_x_5_34_v3.png) |
+| Auditoría del reporte 3 | [Leer documento auditado](01_Ejercicio_original/Version_3/Auditoria_del_reporte_3.pdf) |
+| Reporte aprobado y firmado | [Leer documento final firmado](01_Ejercicio_original/Version_3/Reporte_original_v3_aprobado_y_firmado.pdf) |
 
-### Cálculos manuales
+El reporte generado, el documento auditado y la copia firmada se conservan por separado para distinguir la entrega de Claude, las anotaciones de revisión y la aprobación de las estudiantes.
 
-Las estudiantes realizaron la comprobación manual y confirmaron la concordancia de los resultados. El documento organizado de los cálculos se incorporará como evidencia del procedimiento utilizado.
+[Explorar la carpeta de la versión 3](01_Ejercicio_original/Version_3/)
 
-**Estado del documento:** pendiente de incorporar al repositorio.
+## 7. Cálculos manuales del ejercicio original
 
-## 4. Ejercicio modificado
+El documento incluye el diagrama del sistema, las suposiciones, el desarrollo de las temperaturas, la tabla de temperaturas nodales, el perfil térmico y el cálculo del coeficiente de convección requerido.
 
-Esta parte documentará las modificaciones propuestas al ejercicio original, su justificación y su efecto sobre los resultados. Se especificarán los datos, las condiciones y las suposiciones del nuevo planteamiento.
+[Consultar los cálculos manuales del ejercicio original 5-34](01_Ejercicio_original/Calculo_manual_Ejercicio_original_5_34.pdf)
 
-**Estado:** pendiente de incorporar al repositorio.
+### Resultados principales
 
-### Versión 1 — Desarrollo inicial
+| Magnitud | Resultado |
+| --- | --- |
+| Temperatura máxima del metal, T₀ | 105.125 °C |
+| Temperatura en la interfaz, T₆ | 105 °C |
+| Temperatura de la superficie exterior, T₁₀ | 45 °C |
+| Coeficiente de convección umbral, h* | 1200/143 ≈ 8.391608 W/(m²·K) |
 
-Incluirá el planteamiento del ejercicio modificado, la conversación con Claude, el reporte inicial, el código, las gráficas y la auditoría correspondiente.
+Con las condiciones originales, la temperatura máxima del metal supera el límite de 93 °C indicado en el ejercicio.
 
-### Versión 2 — Revisión y mejoras
+- Para **h = h***, la temperatura máxima es **93 °C**.
+- Para **h > h***, la temperatura máxima es **menor de 93 °C**.
 
-Incluirá las correcciones solicitadas a partir de la primera auditoría, la conversación correspondiente, los archivos actualizados y la comprobación de los resultados.
+La comparación manual realizada por las estudiantes se distingue de las comprobaciones computacionales descritas por Claude. La confirmación de los cálculos no implica, por sí sola, la validación de todas las referencias bibliográficas o de las referencias a diapositivas.
 
-## 5. Comparación y conclusiones
+## 8. Uso de inteligencia artificial y revisión
 
-La comparación final presentará:
+Claude se utilizó como herramienta de apoyo para generar reportes, código, gráficas y documentos en distintos formatos.
 
-- Las diferencias entre el ejercicio original y el modificado.
-- El efecto de los cambios sobre los resultados.
-- La concordancia entre los cálculos manuales y computacionales.
-- Los errores, las explicaciones incompletas y las limitaciones identificadas durante las auditorías.
-- Las mejoras incorporadas mediante los prompts posteriores.
-- Las conclusiones del proyecto.
+Los prompts y las respuestas se conservan para documentar las solicitudes realizadas y las modificaciones entre versiones. Las auditorías y los cálculos manuales permiten contrastar el contenido generado y registrar las observaciones de las estudiantes.
 
-**Estado:** pendiente de incorporar al repositorio.
+La copia aprobada y firmada se encuentra en la carpeta de la versión 3 y constituye el documento final de aprobación del ejercicio original.
