@@ -156,8 +156,6 @@ Te entregué `Reporte_original_v2.pdf` (15 páginas, tamaño carta) y `Reporte_o
 - **Legibilidad:** revisé las 15 páginas. Las 13 tablas, las ecuaciones, la gráfica con su ampliación y el registro de cambios se ven completos, sin texto cortado ni superpuesto. Los 35 títulos del original que no llevan ecuaciones aparecen en el PDF, junto con valores clave como 1200, 105.1250, 93.003427 y 149.76.
 - **Pie de figura:** bajo la gráfica aparece "T(x)". Viene del pie de figura de la conversión y lo dejé.
 - **Word:** las ecuaciones quedaron como ecuaciones nativas de Word. Ábranlo en Word para confirmar que se vean bien, porque aquí no tengo cómo mostrarlas en ese formato.
-  
-#### Archivo entregado
 
 #### Archivos entregados
 
