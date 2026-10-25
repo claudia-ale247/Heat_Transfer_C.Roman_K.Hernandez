@@ -165,8 +165,6 @@ Estos archivos ya los había generado antes con el mismo contenido, así que no 
 - **Word editable:** el texto, las tablas y las ecuaciones son nativos, así que pueden añadir comentarios de auditoría. No añadí ninguno.
 - **Pendiente de verificar:** en Word, revisen que las ecuaciones se vean bien, porque aquí no tengo cómo mostrarlas en ese formato.
 
-#### Archivo entregado
-
 #### Archivos entregados
 
 - [Consultar el reporte original en PDF](Reporte_original_v1.pdf)
