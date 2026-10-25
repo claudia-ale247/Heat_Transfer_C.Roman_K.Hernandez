@@ -134,28 +134,26 @@ El reporte generado, el documento auditado y la copia firmada se conservan por s
 
 ### 2.7. Comparación entre los cálculos manuales y el reporte final
 
-Las estudiantes resolvieron el ejercicio manualmente y compararon sus resultados con los del reporte final generado con Claude.
-
-Los valores manuales se conservan con los decimales que aparecen en el documento. Las pequeñas diferencias respecto al cálculo computacional son consistentes con el redondeo utilizado durante el procedimiento manual.
+Las estudiantes resolvieron el ejercicio manualmente y compararon sus resultados con los del reporte final generado con Claude. Todos los valores se presentan a tres decimales para utilizar el mismo formato de comparación.
 
 [Consultar el documento de cálculos manuales](01_Ejercicio_original/Calculo_manual_Ejercicio_original_5_34.pdf)
 
 | Magnitud | Resultado manual | Reporte final de Claude — Versión 3 | Comparación |
 | --- | --- | --- | --- |
-| T₀ — Base del metal | 105.125 °C | 105.1250 °C | Coinciden |
-| T₁ | 105.10417 °C | 105.1042 °C | Coinciden considerando el redondeo |
-| T₂ | 105.08334 °C | 105.0833 °C | Coinciden considerando el redondeo |
-| T₃ | 105.06251 °C | 105.0625 °C | Coinciden considerando el redondeo |
-| T₄ | 105.04168 °C | 105.0417 °C | Coinciden considerando el redondeo |
-| T₅ | 105.02085 °C | 105.0208 °C | Diferencia menor de 0.0001 °C por redondeo |
-| T₆ — Interfaz | 105.00002 °C | 105.0000 °C | Coinciden considerando el redondeo |
-| T₇ | 90 °C | 90.0000 °C | Coinciden |
-| T₈ | 75 °C | 75.0000 °C | Coinciden |
-| T₉ | 60 °C | 60.0000 °C | Coinciden |
-| T₁₀ — Superficie exterior | 45 °C | 45.0000 °C | Coinciden |
-| Coeficiente de convección umbral, h* | ≈ 8.39161 W/(m²·K) | 1200/143 ≈ 8.391608 W/(m²·K) | Coinciden considerando el redondeo |
+| T₀ — Base del metal | 105.125 °C | 105.125 °C | Coinciden |
+| T₁ | 105.104 °C | 105.104 °C | Coinciden |
+| T₂ | 105.083 °C | 105.083 °C | Coinciden |
+| T₃ | 105.063 °C | 105.063 °C | Coinciden |
+| T₄ | 105.042 °C | 105.042 °C | Coinciden |
+| T₅ | 105.021 °C | 105.021 °C | Coinciden |
+| T₆ — Interfaz | 105.000 °C | 105.000 °C | Coinciden |
+| T₇ | 90.000 °C | 90.000 °C | Coinciden |
+| T₈ | 75.000 °C | 75.000 °C | Coinciden |
+| T₉ | 60.000 °C | 60.000 °C | Coinciden |
+| T₁₀ — Superficie exterior | 45.000 °C | 45.000 °C | Coinciden |
+| Coeficiente de convección umbral, h* | 8.392 W/(m²·K) | 8.392 W/(m²·K) | Coinciden |
 
-Esta tabla documenta la comparación de las temperaturas nodales y del coeficiente de convección umbral. Las revisiones de las explicaciones, la notación y la presentación se encuentran en las auditorías.
+Los resultados obtenidos manualmente coinciden con los del reporte final generado con Claude. Las revisiones de las explicaciones, la notación y la presentación se encuentran en las auditorías.
 
 ### 2.8. Interpretación de los resultados del ejercicio original
 
