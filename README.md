@@ -155,6 +155,8 @@ Las estudiantes resolvieron el ejercicio manualmente y compararon sus resultados
 
 Los resultados obtenidos manualmente coinciden con los del reporte final generado con Claude. Las revisiones de las explicaciones, la notación y la presentación se encuentran en las auditorías.
 
+**Nota:** Los valores de esta tabla se presentan a tres decimales. Los documentos de cálculo manual y del reporte de Claude conservan sus respectivos decimales originales.
+
 ### 2.8. Interpretación de los resultados del ejercicio original
 
 **Distribución de temperaturas**
