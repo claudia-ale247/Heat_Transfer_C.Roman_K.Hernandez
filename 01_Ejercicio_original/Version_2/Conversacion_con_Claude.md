@@ -145,7 +145,7 @@ Conserva exactamente el contenido: no corrijas, resumas, elimines ni añadas inf
 
 Genera el PDF a partir de ese mismo documento de Word para que ambos coincidan. Verifica que todo sea legible y que no haya contenido cortado o superpuesto.
 
-Estos archivos se utilizarán como evidencia del reporte de la versión 2 antes de su auditoría. No añadas comentarios ni correcciones de auditoría.
+Estos archivos se utilizarán como evidencia del reporte de la versión 2 antes de su auditoría.
 ---
 
 ### Respuesta de Claude — Entrega de Word y PDF
