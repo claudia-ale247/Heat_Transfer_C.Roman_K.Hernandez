@@ -5,32 +5,41 @@
 - Karina Hernández Cruz
 - Claudia Román García
 
-Este repositorio presenta la solución del ejercicio original 5-34 y documentará su adaptación para lograr un calentamiento o enfriamiento más rápido.
+Este proyecto presenta la solución del ejercicio original 5-34 y su adaptación para estudiar el comportamiento transitorio y lograr un enfriamiento más rápido.
 
-El proyecto integra cálculos manuales, reportes generados con Claude, código de Python, gráficas y auditorías. Se conservan las conversaciones y las distintas versiones para mostrar cómo se revisaron los resultados y se incorporaron las correcciones.
+El repositorio reúne cálculos manuales, conversaciones con Claude, reportes, código de Python, gráficas y auditorías. Las versiones se conservan para mostrar cómo evolucionó el trabajo, qué observaciones se identificaron y cómo se incorporaron las correcciones.
 
-## 1. Organización del proyecto
+## 1. Organización y estado del proyecto
 
 | Parte | Contenido | Estado |
 | --- | --- | --- |
-| Ejercicio original | Solución manual, tres versiones del reporte, conversaciones con Claude, código, gráficas, auditorías y reporte firmado | Documentación incorporada |
-| Ejercicio modificado | Planteamiento de la adaptación, cálculos, demostración de la mejora, auditorías y reporte final | Pendiente de incorporar |
-| Comparación final | Evaluación de las diferencias entre el ejercicio original y el modificado | Pendiente de incorporar |
+| Ejercicio original | Solución manual, tres versiones del reporte, conversaciones, código, gráficas, auditorías y reporte firmado | Finalizado; versión 3 aprobada por las estudiantes |
+| Ejercicio modificado | Análisis transitorio, adaptación de materiales, espesor y convección, y comparación de enfriamiento | En desarrollo; documentación pendiente de incorporar |
+| Comparación final | Evaluación de la mejora y sus condiciones de validez | Pendiente de completar |
 
-Los datos, resultados y conclusiones de cada ejercicio se presentan por separado.
+### Acceso a los documentos principales
+
+- [Reporte final del ejercicio original, aprobado y firmado](01_Ejercicio_original/Version_3/Reporte_original_v3_aprobado_y_firmado.pdf)
+- [Reporte final de Claude en PDF](01_Ejercicio_original/Version_3/Reporte_original_v3.pdf)
+- [Auditoría de la versión 3](01_Ejercicio_original/Version_3/Auditoria_del_reporte_3.pdf)
+- [Cálculos manuales del ejercicio original](01_Ejercicio_original/Calculo_manual_Ejercicio_original_5_34.pdf)
+- [Conversación completa con Claude: versiones 1, 2 y 3](01_Ejercicio_original/Conversacion_completa_con_Claude.md)
+- [Carpeta del ejercicio original](01_Ejercicio_original/)
+
+**La versión 3 es el reporte final del ejercicio original. La copia aprobada y firmada documenta el cierre de esta parte del proyecto.**
 
 ## 2. Ejercicio original 5-34
 
 ### 2.1. Objetivo y descripción
 
-El ejercicio original estudia la conducción unidimensional en estado estacionario a través de una pared compuesta por una placa metálica y una placa no metálica.
+El ejercicio estudia la conducción unidimensional en estado estacionario a través de una pared compuesta por una placa metálica y una placa no metálica.
 
 El calor entra por la base del metal, atraviesa ambas placas y sale por convección desde la superficie exterior hacia el aire.
 
-Se busca:
+Los objetivos son:
 
 - Determinar las temperaturas de los 11 nodos mediante diferencias finitas.
-- Graficar la distribución de temperatura.
+- Representar gráficamente la distribución de temperatura.
 - Evaluar si la temperatura máxima del metal cumple el límite de 93 °C indicado en el enunciado.
 - Determinar el coeficiente de convección umbral y la condición necesaria para mantener el metal por debajo de ese límite.
 
@@ -46,63 +55,56 @@ Se busca:
 | Separación entre nodos | 5 mm |
 | Límite de temperatura del metal | 93 °C |
 
-[Explorar la carpeta del ejercicio original](01_Ejercicio_original/)
+### 2.2. Por qué se desarrollaron tres versiones
 
-### 2.2. Documentos principales
+El reporte se elaboró mediante un proceso de generación, auditoría y corrección. Las tres versiones documentan ese proceso; no representan tres ejercicios diferentes.
 
-| Documento | Acceso |
+#### Versión 1 — Reporte inicial y primera auditoría
+
+El primer prompt produjo el reporte inicial, el código de Python y la gráfica de temperaturas.
+
+La primera revisión identificó explicaciones que requerían mayor claridad sobre las suposiciones, los balances de energía, la interfaz entre materiales, las unidades y la notación. Estas observaciones quedaron registradas en la auditoría y sirvieron para preparar el segundo prompt.
+
+Esta versión se conserva como evidencia de la primera entrega generada con Claude.
+
+#### Versión 2 — Incorporación de correcciones y segunda auditoría
+
+La segunda versión incorporó las aclaraciones solicitadas a partir de la primera revisión.
+
+La nueva auditoría identificó ajustes adicionales: corregir la descripción de la disminución de temperatura en el metal, precisar la explicación de los errores de punto flotante y actualizar el estado de la comparación manual.
+
+Estas observaciones dieron origen al tercer prompt. Los ajustes no requirieron cambiar las temperaturas nodales ni el coeficiente de convección umbral.
+
+#### Versión 3 — Confirmación manual y reporte final
+
+La tercera versión incorporó las correcciones anteriores. Posteriormente, se actualizó dentro de esta misma versión el estado de las comprobaciones manuales confirmadas por las estudiantes.
+
+**En las versiones 1 y 2 todavía no se había confirmado la verificación manual completa. Para la versión 3, Karina Hernández Cruz y Claudia Román García confirmamos la coincidencia de los cálculos revisados con nuestros cálculos manuales, considerando el redondeo.**
+
+Esta confirmación se distingue de las comprobaciones computacionales realizadas por Claude. La verificación manual corresponde al trabajo de las estudiantes; no implica que Claude haya inspeccionado nuestro documento manual.
+
+La revisión final quedó documentada en la auditoría de la versión 3 y la aprobación se registró mediante la copia firmada por ambas estudiantes.
+
+Por ello, **la versión 3 se identifica como el reporte final del ejercicio original**. Las versiones 1 y 2 permanecen disponibles como evidencia del proceso de revisión.
+
+La confirmación de los cálculos no modifica por sí sola el estado de revisión de las referencias a diapositivas, registrado por separado en la documentación.
+
+### 2.3. Conversaciones con Claude
+
+La conversación global reúne los prompts, las respuestas y los archivos entregados durante las tres versiones. También se conservan las conversaciones individuales dentro de cada carpeta.
+
+| Registro | Acceso |
 | --- | --- |
-| Reporte final aprobado y firmado | [Leer documento firmado](01_Ejercicio_original/Version_3/Reporte_original_v3_aprobado_y_firmado.pdf) |
-| Auditoría del reporte final | [Consultar auditoría de la versión 3](01_Ejercicio_original/Version_3/Auditoria_del_reporte_3.pdf) |
-| Cálculos manuales | [Consultar desarrollo manual](01_Ejercicio_original/Calculo_manual_Ejercicio_original_5_34.pdf) |
-| Reporte final de Claude en PDF | [Leer reporte 3](01_Ejercicio_original/Version_3/Reporte_original_v3.pdf) |
-| Reporte final editable | [Descargar documento de Word](01_Ejercicio_original/Version_3/Reporte_original_v3.docx) |
-| Conversación global con Claude | [Consultar las conversaciones de las tres versiones](01_Ejercicio_original/Conversacion_completa_con_Claude.md) |
+| Conversación global | [Leer las conversaciones completas](01_Ejercicio_original/Conversacion_completa_con_Claude.md) |
+| Conversación de la versión 1 | [Leer prompt 1 y respuestas](01_Ejercicio_original/Version_1/Conversaci%C3%B3n_con_Claude.md) |
+| Conversación de la versión 2 | [Leer prompt 2 y respuestas](01_Ejercicio_original/Version_2/Conversacion_con_Claude.md) |
+| Conversación de la versión 3 | [Leer prompt 3, actualización y respuestas](01_Ejercicio_original/Version_3/Conversacion_con_Claude.md) |
 
-**La versión 3 corresponde al reporte final del ejercicio original. La copia aprobada y firmada es el documento de cierre de esta parte del proyecto.**
-
-### 2.3. Proceso de trabajo y evolución de los reportes
-
-El ejercicio original se documentó en tres versiones mediante un proceso de generación, auditoría y corrección. Las estudiantes resolvieron el ejercicio manualmente y utilizaron sus resultados para contrastar las temperaturas nodales y el coeficiente de convección calculados por Claude.
-
-**Versión 1 — Generación y primera revisión**
-
-El primer prompt produjo el reporte inicial, el código y la gráfica. La primera auditoría identificó explicaciones que requerían mayor claridad sobre las suposiciones, los balances de energía, la interfaz entre materiales, las unidades, la notación y el redondeo.
-
-Los resultados numéricos principales eran consistentes con la solución manual. Las observaciones se utilizaron para preparar el segundo prompt y mejorar el desarrollo del reporte.
-
-**Versión 2 — Correcciones y segunda revisión**
-
-La segunda versión incorporó las aclaraciones solicitadas. Al revisarla nuevamente, se identificaron ajustes pendientes: corregir la descripción de la disminución de temperatura en el metal, precisar la explicación de los errores de punto flotante y actualizar la información sobre la comparación con los cálculos manuales.
-
-Estas observaciones dieron origen al tercer prompt. No implicaron cambiar las temperaturas ni el coeficiente de convección obtenidos.
-
-**Versión 3 — Revisión final y aprobación**
-
-La tercera versión incorporó los ajustes de la segunda auditoría. Posteriormente, se actualizó dentro de esta misma versión el estado de las comprobaciones manuales confirmadas por las estudiantes.
-
-La auditoría final confirmó que las correcciones solicitadas estaban incorporadas y no identificó nuevas correcciones técnicas en los aspectos revisados. Las temperaturas nodales y el coeficiente de convección coincidieron con la solución manual, considerando el redondeo.
-
-Por ello, la **versión 3 se conserva como el reporte final completo del ejercicio original**. Las versiones anteriores permanecen disponibles para mostrar la evolución del trabajo.
-
-La aprobación técnica se distingue de la confirmación de las referencias a diapositivas, que se conservó como pendiente en el registro de auditoría.
-
-**Conversaciones y registro del proceso**
-
-La conversación global reúne los prompts, las respuestas y los enlaces a los archivos entregados. Las conversaciones individuales también se conservan dentro de cada carpeta.
-
-| Conversación | Acceso |
-| --- | --- |
-| Conversación global | [Consultar registro completo](01_Ejercicio_original/Conversacion_completa_con_Claude.md) |
-| Versión 1 | [Consultar prompt 1 y respuestas](01_Ejercicio_original/Version_1/Conversaci%C3%B3n_con_Claude.md) |
-| Versión 2 | [Consultar prompt 2 y respuestas](01_Ejercicio_original/Version_2/Conversacion_con_Claude.md) |
-| Versión 3 | [Consultar prompt 3, ajustes adicionales y respuestas](01_Ejercicio_original/Version_3/Conversacion_con_Claude.md) |
-
-Las auditorías de las estudiantes se presentan como documentos separados. Las observaciones enviadas posteriormente a Claude se conservan en los prompts correspondientes.
+Las auditorías se presentan como documentos separados. Las observaciones que se enviaron a Claude para solicitar correcciones aparecen en los prompts correspondientes.
 
 ### 2.4. Archivos de la versión 1
 
-Primera entrega del ejercicio original y documento de su primera auditoría.
+Primera entrega del ejercicio original y su auditoría.
 
 | Archivo | Acceso |
 | --- | --- |
@@ -118,7 +120,7 @@ Primera entrega del ejercicio original y documento de su primera auditoría.
 
 ### 2.5. Archivos de la versión 2
 
-Segunda entrega del ejercicio original y documento de la auditoría que dio lugar a los ajustes de la versión 3.
+Segunda entrega del ejercicio original y auditoría que dio lugar a los ajustes de la versión 3.
 
 | Archivo | Acceso |
 | --- | --- |
@@ -132,9 +134,9 @@ Segunda entrega del ejercicio original y documento de la auditoría que dio luga
 
 [Explorar la carpeta de la versión 2](01_Ejercicio_original/Version_2/)
 
-### 2.6. Archivos de la versión 3 — Entrega final
+### 2.6. Archivos de la versión 3 — Reporte final
 
-Los reportes en PDF, Word y Markdown corresponden a la última entrega actualizada de la versión 3. El código y la gráfica se conservaron de la primera entrega de esta versión, según lo registrado en la conversación.
+Los reportes en PDF, Word y Markdown corresponden a la entrega actualizada de la versión 3. El código y la gráfica se conservaron de la primera entrega de esta versión, según lo documentado en la conversación.
 
 | Archivo | Acceso |
 | --- | --- |
@@ -147,17 +149,17 @@ Los reportes en PDF, Word y Markdown corresponden a la última entrega actualiza
 | Auditoría del reporte 3 | [Leer documento auditado](01_Ejercicio_original/Version_3/Auditoria_del_reporte_3.pdf) |
 | Reporte aprobado y firmado | [Leer documento final firmado](01_Ejercicio_original/Version_3/Reporte_original_v3_aprobado_y_firmado.pdf) |
 
-Estos documentos cumplen funciones distintas:
+Los tres documentos PDF cumplen funciones distintas:
 
-- **Reporte_original_v3.pdf:** contiene el reporte técnico completo de la última entrega de Claude.
-- **Auditoria_del_reporte_3.pdf:** contiene la revisión y el comentario de cierre de auditoría.
-- **Reporte_original_v3_aprobado_y_firmado.pdf:** contiene el reporte y la certificación firmada por ambas estudiantes; es la copia final aprobada para la entrega.
+- **Reporte final:** presenta el desarrollo técnico generado con Claude y actualizado tras las correcciones.
+- **Auditoría:** conserva las anotaciones y el cierre de la revisión.
+- **Reporte aprobado y firmado:** documenta la aprobación de ambas estudiantes y constituye la copia final para la entrega.
 
 [Explorar la carpeta de la versión 3](01_Ejercicio_original/Version_3/)
 
 ### 2.7. Comparación entre los cálculos manuales y el reporte final
 
-Las estudiantes resolvieron el ejercicio manualmente y compararon sus resultados con los del reporte final generado con Claude.
+Las estudiantes resolvieron el ejercicio manualmente y contrastaron sus resultados con los del reporte final generado con Claude. La siguiente tabla resume las temperaturas nodales y el coeficiente de convección umbral.
 
 [Consultar el documento de cálculos manuales](01_Ejercicio_original/Calculo_manual_Ejercicio_original_5_34.pdf)
 
@@ -180,120 +182,138 @@ Los resultados obtenidos manualmente coinciden con los del reporte final generad
 
 **Nota:** Los valores de esta tabla se presentan a tres decimales. Los documentos de cálculo manual y del reporte de Claude conservan sus respectivos decimales originales.
 
-### 2.8. Interpretación de los resultados del ejercicio original
+### 2.8. Interpretación de los resultados
 
-**Distribución de temperaturas**
+#### Distribución de temperatura
 
-La temperatura disminuye desde la base del metal hasta la superficie expuesta al aire. Este comportamiento es consistente con el calor que entra por la base, atraviesa las placas y sale por convección hacia el ambiente.
+La temperatura disminuye desde la base del metal hasta la superficie expuesta al aire, de acuerdo con la dirección de transferencia del calor.
 
-La temperatura máxima se encuentra en el nodo 0 y es de **105.125 °C**. En la interfaz entre los materiales es aproximadamente **105 °C**, y en la superficie exterior es de **45 °C**.
+La temperatura máxima se encuentra en el nodo 0 y es de **105.125 °C**. En la interfaz entre materiales es de aproximadamente **105 °C**, y en la superficie exterior es de **45 °C**.
 
-**Comportamiento de los materiales**
+#### Diferencia entre los materiales
 
-La caída de temperatura a través del metal es de **0.125 °C**, mientras que en la placa no metálica es de **60 °C**.
+La caída de temperatura en el metal es de **0.125 °C**, mientras que en la placa no metálica es de **60 °C**.
 
-La mayor caída ocurre en la placa no metálica porque su resistencia térmica a la conducción es mucho mayor. El perfil dentro del metal parece casi horizontal en la gráfica general, pero su ampliación permite observar la disminución de temperatura.
+La mayor caída ocurre en la placa no metálica porque su resistencia térmica a la conducción es mucho mayor. Por eso, el perfil del metal parece casi horizontal en la gráfica general; la ampliación permite observar su pequeña disminución de temperatura.
 
-**Evaluación del límite de 93 °C**
+![Distribución de temperatura del ejercicio original](01_Ejercicio_original/Version_3/T_vs_x_5_34_v3.png)
 
-El ejercicio requiere determinar si la temperatura del metal cumple el límite indicado; no presupone que las condiciones originales deban cumplirlo.
+#### Evaluación del límite de 93 °C
 
-Con **h = 5 W/(m²·K)**, la temperatura máxima es **105.125 °C**, por lo que supera el límite en **12.125 °C**. Por tanto, las condiciones originales no satisfacen el criterio térmico del enunciado.
+El ejercicio requiere evaluar el límite térmico; no presupone que las condiciones originales deban cumplirlo.
 
-**Significado del coeficiente de convección calculado**
+Con **h = 5 W/(m²·K)**, la temperatura máxima de **105.125 °C** supera el límite en **12.125 °C**. Por tanto, las condiciones originales no satisfacen el criterio térmico indicado.
 
-El valor **h* = 1200/143 ≈ 8.391608 W/(m²·K)** es el umbral que produce una temperatura máxima de exactamente **93 °C**, manteniendo los demás datos constantes.
+#### Significado del coeficiente de convección umbral
 
-- Para alcanzar exactamente **93 °C**, se utiliza **h = h***.
-- Para mantener el metal estrictamente por debajo de **93 °C**, se requiere **h > h***.
+El valor **h* = 1200/143 ≈ 8.391608 W/(m²·K)** produce una temperatura máxima de exactamente **93 °C**, manteniendo constantes los demás datos.
 
-El valor **8.39** es una aproximación del umbral. Si se utiliza literalmente, produce una temperatura ligeramente superior a 93 °C; por eso se conserva el valor exacto al establecer la condición.
+- **h = h*:** la temperatura máxima es igual a 93 °C.
+- **h > h*:** la temperatura máxima es menor que 93 °C.
 
-**Conclusión del ejercicio original**
+El valor 8.39 es una aproximación del umbral. Para establecer la condición estricta se conserva el valor exacto, ya que utilizar literalmente 8.39 produce una temperatura ligeramente superior a 93 °C.
+
+#### Conclusión del ejercicio original
 
 La solución manual y el reporte final de Claude coinciden en las temperaturas nodales y el coeficiente de convección umbral.
 
-El análisis demuestra que las condiciones originales producen una temperatura máxima superior al límite indicado. Aumentar el coeficiente de convección por encima del umbral calculado permite reducir la temperatura máxima estacionaria por debajo de 93 °C, manteniendo los demás datos constantes.
+El análisis demuestra que las condiciones originales producen una temperatura máxima superior al límite indicado. Aumentar la convección por encima del umbral calculado permite reducir esa temperatura por debajo de 93 °C, manteniendo los demás datos constantes.
 
-Las tres versiones documentan la mejora progresiva de las explicaciones y la presentación del reporte, conservando los resultados numéricos correctos.
+Las tres versiones documentan la revisión progresiva del reporte. La versión 3 incorpora las correcciones y la confirmación de la verificación manual, y cuenta con la aprobación firmada de ambas estudiantes.
 
 ## 3. Ejercicio modificado
 
-**Estado: pendiente de incorporar al repositorio.**
+**Estado: en desarrollo; reportes, auditorías y archivos pendientes de incorporar al repositorio.**
 
-Esta parte documentará la adaptación del ejercicio original y la demostración de una mejora en el calentamiento o enfriamiento del sistema.
+Esta etapa amplía el ejercicio original mediante un análisis transitorio y una adaptación orientada a reducir el tiempo de enfriamiento.
 
-### 3.1. Planteamiento y justificación
+### 3.1. Configuraciones propuestas
 
-Se presentarán:
+| Parámetro | Caso A — Configuración original | Caso B — Configuración modificada |
+| --- | --- | --- |
+| Placa inferior | SB-96, 30 mm | SB-96, 30 mm |
+| Capa superior | Material no metálico | Aluminio |
+| Espesor de la capa superior | 20 mm | 5 mm |
+| Conductividad de la capa superior | 0.050 W/(m·K) | 237 W/(m·K) |
+| Coeficiente de convección | 5 W/(m²·K) | 25 W/(m²·K) |
+| Temperatura del aire | 15 °C | 15 °C |
 
-- El objetivo de la modificación.
-- Los parámetros que cambian respecto al ejercicio original.
-- Los datos y condiciones que se conservan.
-- Las nuevas condiciones y suposiciones.
-- La justificación física de la mejora propuesta.
-- El criterio utilizado para evaluar el calentamiento o enfriamiento más rápido.
+La propuesta combina tres cambios: material de la capa superior, espesor y convección. La mejora se evaluará como resultado de esa combinación.
 
-### 3.2. Proceso de trabajo y versiones
+Las propiedades adicionales necesarias para calcular tiempos, sus fuentes y los supuestos del modelo se documentarán en el reporte del ejercicio modificado.
 
-Se registrará la evolución del ejercicio modificado mediante sus prompts, respuestas, reportes y auditorías.
+### 3.2. Pruebas que se desarrollarán
 
-Cada versión conservará sus archivos correspondientes. Se explicarán las observaciones identificadas, las correcciones solicitadas y la razón por la que se selecciona una versión final.
+#### Calentamiento
 
-### 3.3. Documentos del ejercicio modificado
+Ambos sistemas comienzan uniformemente a 15 °C y reciben un flujo de calor de 150 W/m² por la superficie inferior.
 
-Se incorporarán:
+Se estudiarán la evolución de las temperaturas, el tiempo para completar el 95 % del aumento de temperatura y el cumplimiento del límite térmico de 93 °C.
 
-- Conversación global y conversaciones individuales con Claude.
-- Reportes en PDF, Word y Markdown.
-- Código de Python.
-- Gráficas.
-- Cálculos manuales.
-- Auditorías.
-- Reporte final aprobado y firmado.
+#### Enfriamiento
 
-Los enlaces se añadirán cuando los archivos estén disponibles.
+Se realizará una prueba independiente con ambos sistemas inicialmente a 90 °C, el calentamiento apagado y aire a 15 °C.
 
-### 3.4. Comparación entre los cálculos manuales y el reporte final
+Se comparará el tiempo necesario para que la temperatura máxima de cada sistema disminuya hasta 60 °C. Cada configuración conservará sus materiales, espesores y coeficiente de convección.
 
-Se presentará una tabla con los resultados obtenidos manualmente y los del reporte final de Claude.
+Esta comparación permitirá evaluar directamente el enfriamiento bajo temperaturas inicial y objetivo comunes.
 
-La comparación se mantendrá separada de la correspondiente al ejercicio original e incluirá las magnitudes utilizadas para demostrar la mejora propuesta.
+### 3.3. Proceso de trabajo y documentación
 
-### 3.5. Interpretación y conclusiones
+El ejercicio modificado tendrá su propia numeración de versiones, comenzando por la versión 1.
 
-Se explicará qué significan los resultados, cómo afectan las modificaciones al comportamiento térmico y bajo qué condiciones se demuestra la mejora.
+Se conservarán:
 
-Los resultados y conclusiones se incorporarán después de realizar y revisar los cálculos.
+- Los prompts y las respuestas de Claude.
+- La conversación global y las conversaciones individuales.
+- Los reportes en PDF, Word y Markdown.
+- El código de Python.
+- Las gráficas y tablas de resultados.
+- Los cálculos manuales.
+- Las auditorías y las correcciones.
+- El reporte final aprobado y firmado.
 
-## 4. Comparación entre el ejercicio original y el modificado
+Los enlaces se incorporarán cuando los archivos estén disponibles.
 
-**Estado: pendiente de completar.**
+### 3.4. Verificación e interpretación
 
-La comparación final presentará:
+Se distinguirán las aproximaciones analíticas de los resultados numéricos. También se documentarán las comprobaciones de estabilidad, convergencia y balance de energía.
 
-- Las diferencias en los parámetros y las condiciones de ambos ejercicios.
-- El efecto de las modificaciones sobre las temperaturas.
-- La comparación de tiempos de calentamiento o enfriamiento bajo condiciones iniciales y criterios definidos.
-- La mejora obtenida y las suposiciones bajo las cuales es válida.
-- Las conclusiones de la adaptación.
+La comparación manual se presentará en una tabla independiente de la del ejercicio original. No se identificará una versión como aprobada hasta completar su revisión y documentar la confirmación de las estudiantes.
 
-La reducción de una temperatura estacionaria no se utilizará, por sí sola, como demostración de un menor tiempo de enfriamiento.
+Los resultados finales de esta etapa se incorporarán después de revisar el reporte y sus cálculos.
+
+## 4. Comparación final del proyecto
+
+**Estado: pendiente de completar con los resultados revisados del ejercicio modificado.**
+
+La comparación explicará:
+
+- Qué parámetros se conservaron y cuáles se modificaron.
+- Cómo cambiaron las resistencias y el almacenamiento térmico.
+- Cómo se modificaron las temperaturas estacionarias.
+- Cuánto se redujo el tiempo de enfriamiento entre las temperaturas comunes seleccionadas.
+- Bajo qué supuestos y condiciones es válida la mejora.
+
+El ejercicio original aporta la solución estacionaria de referencia. Su extensión transitoria, denominada caso A, permitirá comparar tiempos con el caso B modificado.
+
+Una temperatura estacionaria menor no se utilizará, por sí sola, como prueba de un enfriamiento más rápido.
 
 ## 5. Uso de inteligencia artificial y auditoría
 
-Claude se utilizó como herramienta de apoyo para generar reportes, código, gráficas y documentos en distintos formatos.
+Claude se utiliza como herramienta de apoyo para generar reportes, código, gráficas y documentos. ChatGPT también se utiliza como apoyo para organizar el proyecto, preparar prompts y revisar el planteamiento y los resultados.
 
-Los prompts y las respuestas se conservan para documentar las solicitudes realizadas y los cambios entre versiones.
+Las comprobaciones realizadas mediante herramientas computacionales se distinguen de la verificación manual de las estudiantes.
 
-Las auditorías revisan:
+Las auditorías evalúan:
 
 - Los cálculos y sus unidades.
 - La coherencia entre ecuaciones, tablas, gráficas y conclusiones.
-- Las explicaciones incompletas o que requieren aclaración.
+- Los supuestos y los límites de los métodos empleados.
+- Las explicaciones incompletas o que necesitan aclaración.
 - La terminología y su relación con el material discutido en clase.
-- Las afirmaciones y limitaciones de las comprobaciones realizadas.
+- Las afirmaciones que requieren evidencia o corrección.
 
-La solución manual de las estudiantes se utiliza para contrastar los resultados generados con AI. Las comprobaciones computacionales se distinguen de la verificación manual.
+Las conversaciones registran las solicitudes y respuestas. Las auditorías documentan las observaciones de revisión. Los cálculos manuales permiten contrastar los resultados, y el reporte firmado registra la aprobación final de las estudiantes.
 
-Para el ejercicio original, la aprobación se documenta mediante la copia firmada de la versión 3. La documentación equivalente del ejercicio modificado se incorporará al completar esa etapa.
+Para el ejercicio original, este proceso culminó en la **versión 3 aprobada y firmada**. La documentación equivalente del ejercicio modificado se incorporará al completar su desarrollo y revisión.
