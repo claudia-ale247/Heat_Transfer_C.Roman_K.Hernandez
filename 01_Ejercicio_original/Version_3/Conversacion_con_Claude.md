@@ -124,7 +124,18 @@ Para el certificado firmado, la frase del reporte debe corresponder a lo que de 
 
 ## 5. Archivos entregados
 
-Pendientes de subir a esta carpeta y enlazar.
+Los reportes corresponden a la última entrega actualizada de la versión 3. El código y la gráfica se conservaron de la primera entrega de esta versión.
+
+### Reportes actualizados
+
+- [Leer el reporte en Markdown](reporte_original_v3.md)
+- [Consultar el reporte editable en Word](Reporte_original_v3.docx)
+- [Leer el reporte en PDF](Reporte_original_v3.pdf)
+
+### Código y gráfica
+
+- [Consultar el código de Python](ej_5_34_v3.py)
+- [Ver la gráfica de temperaturas](T_vs_x_5_34_v3.png)
 
 ---
 
