@@ -1168,9 +1168,9 @@ Durante el proceso, Claude entregó varias actualizaciones del reporte con los m
 
 ---
 
-### 1. Solicitud inicial de la versión 3
+## 1. Solicitud inicial de la versión 3
 
-#### Mensaje enviado
+### Mensaje enviado
 
 Prepara la versión 3 completa del reporte del ejercicio modificado 5-34 como versión final para revisión de las estudiantes.
 
@@ -1566,7 +1566,7 @@ No agregues pendientes genéricos cuando ya exista evidencia. Si queda un proble
 
 Prepara ahora la versión 3 completa y sus archivos.
 
-#### Respuesta de Claude
+### Respuesta de Claude
 
 Reviso primero qué archivos adjuntos están realmente disponibles para la versión 3.
 
@@ -1585,9 +1585,9 @@ Cuando los suban, retomo desde ahí: abro cada archivo, les digo qué pude leer 
 
 ---
 
-### 2. Aclaración del alcance y primera entrega
+## 2. Aclaración del alcance y primera entrega
 
-#### Mensaje enviado
+### Mensaje enviado
 
 ACLARACIÓN DEL ALCANCE DEL PROMPT 3
 
@@ -1664,7 +1664,7 @@ Deja firmas y fechas en blanco. No declares aprobación ni verificación manual 
 
 Continúa ahora con las correcciones utilizando este alcance.
 
-#### Respuesta de Claude
+### Respuesta de Claude
 
 Con este alcance sí puedo preparar la v3 con lo que ya está en la sesión (reporte, código y resultados de la v2). Empiezo revisando el prompt completo y el estado de las herramientas de construcción.
 
@@ -1725,9 +1725,9 @@ Para cerrar la v3, queda que ustedes comparen su documento y su Excel con las ta
 
 ---
 
-### 3. Incorporación del documento de cálculos manuales
+## 3. Incorporación del documento de cálculos manuales
 
-#### Mensajes enviados
+### Mensajes enviados
 
 Completa la versión 3 que acabas de entregar. Esta solicitud es un ajuste dentro de la misma versión: no generes una versión 4.
 
@@ -1747,33 +1747,13 @@ Si el código, las gráficas y los CSV no cambian, indícalo y conserva los arch
 
 Mantén firmas y fechas en blanco hasta nuestra aprobación.
 
-#### Respuesta intermedia de Claude — Archivos no recibidos
-
-Primero verifico qué archivos adjuntos llegaron realmente.
-
-No puedo completar la comparación todavía, porque los archivos que mencionan no llegaron a la sesión. Lo más reciente que hay es el texto de aclaración de las 20:04. No hay ningún documento de cálculos manuales, ningún Excel ni páginas del libro. Los demás archivos son los de antes: los prompts, la rúbrica y las tres Libretas.
-
-Sin esos archivos, cambiar las expresiones "no visto", "sin contraste de valores" y "documento no inspeccionado" sería declarar comparaciones que no hice. Por eso dejé la v3 entregada como estaba.
-
-Para cerrar la v3 con los mismos nombres, necesito:
-
-- **Documento de cálculos manuales:** el PDF, o al menos las páginas 6–22.
-- **Resultados de Excel:** el archivo `.xlsx` o capturas de las tablas. Con capturas solo puedo comparar los valores visibles, no las fórmulas.
-- **Libro:** las páginas de las tablas A-3 y A-8 (aluminio puro, *cartridge brass* y corcho), con la página donde aparece la temperatura de referencia.
-
-Si algún archivo pesa demasiado, mándenlo por partes, por ejemplo solo esas páginas.
-
-Cuando lleguen, comparo cada fila de 12.4 y 16 con sus páginas, distingo lo manual de lo de Excel, y confirmo las propiedades y sus temperaturas de referencia. Mantengo ρ y cp del metal y de la capa como supuestos identificados. Actualizo las conclusiones y el registro de cambios, y entrego Markdown, Word y PDF con los nombres actuales, con el PDF generado desde el mismo Word. El código, las figuras y los CSV los conservo salvo que encuentre un error real. Las firmas y fechas siguen en blanco.
-
-#### Mensaje posterior — Envío de los cálculos manuales
-
 Ademas, adjunto nuestros cálculos manuales, incluidas las tablas de Excel. Úsalos para completar la comparación y actualizar las secciones 12.4 y 16. Mantén la versión 3 y los mismos nombres de archivo. No detengas esta actualización por la ausencia del libro; conserva claramente identificado el estado de las referencias que no pudiste verificar.
 
-#### Documento compartido
+### Documento compartido
 
-[Cálculos manuales del ejercicio modificado](Calculos_manuales_Ejercicio_modificado_5_34.pdf)
+[Cálculos manuales del ejercicio modificado](../Calculos_manuales_Ejercicio_modificado_5_34.pdf)
 
-#### Respuestas de Claude
+### Respuestas de Claude
 
 Leí las 14 páginas de sus cálculos manuales y transcribí las tablas de Excel. Ahora las contrasto numéricamente con mi código (primeros pasos, tablas de calentamiento y de enfriamiento, coeficientes, estabilidad) para saber con exactitud dónde coinciden y dónde difieren, antes de reescribir 12.4 y 16.
 
@@ -1812,9 +1792,9 @@ Los archivos están en `/mnt/user-data/outputs/modificado_v3/`.
 
 ---
 
-### 4. Ajustes de la comparación y del estado de verificación
+## 4. Ajustes de la comparación y del estado de verificación
 
-#### Mensaje enviado
+### Mensaje enviado
 
 Actualiza los últimos tres archivos que entregaste del reporte modificado versión 3: Markdown, Word y PDF. Esta es una actualización de esa misma versión; no generes una versión 4.
 
@@ -1900,7 +1880,7 @@ Mantén las firmas y fechas en blanco para que nosotras las completemos después
 
 Al terminar, resume los cambios e indica si modificaste algún resultado numérico. No declares verificaciones que no realizaste ni garantices ausencia absoluta de errores.
 
-#### Respuesta de Claude
+### Respuesta de Claude
 
 Estoy aplicando los seis ajustes a la versión 3: nuevo estado de verificación, procedencia de 0.77708 y de los tiempos 8.5331 h y 37.746 min, filas separadas del Biot, y etiquetas de las comprobaciones adicionales. Después recompilo Word y PDF y reviso las páginas.
 
@@ -1931,9 +1911,9 @@ Archivos en `/mnt/user-data/outputs/modificado_v3/`:
 
 ---
 
-### 5. Aclaración sobre la estructura de prompts y las fuentes
+## 5. Aclaración sobre la estructura de prompts y las fuentes
 
-#### Mensaje enviado
+### Mensaje enviado
 
 Haz una última actualización de presentación y referencias en los tres formatos del reporte, conservando la versión 3 y todos los resultados.
 
@@ -1955,7 +1935,7 @@ No inventes páginas ni temperaturas de referencia. Conserva los supuestos físi
 
 Entrega nuevamente el reporte completo en Markdown, Word editable y PDF, con los mismos nombres de la versión 3. No cambies los cálculos, el código, las figuras ni los CSV por estos ajustes.
 
-#### Respuesta de Claude
+### Respuesta de Claude
 
 Voy a localizar todas las menciones de la plantilla de GitHub y de las tablas del libro para reescribirlas según su indicación; no toco cálculos, código, figuras ni CSV.
 
@@ -1985,9 +1965,9 @@ Archivos en `/mnt/user-data/outputs/modificado_v3/`:
 
 ---
 
-### 6. Ajuste de la nota sobre Excel
+## 6. Ajuste de la nota sobre Excel
 
-#### Mensaje enviado
+### Mensaje enviado
 
 Sustituye la frase sobre la “limitación localizada” de Excel por esta nota breve, una sola vez en la sección de verificación:
 
@@ -1997,7 +1977,7 @@ No lo presentes como una verificación pendiente ni repitas esta aclaración en 
 
 Las firmas y fechas permanecerán en blanco hasta que las estudiantes aprueben y firmen la copia final.
 
-#### Respuesta de Claude
+### Respuesta de Claude
 
 Estoy sustituyendo las menciones dispersas sobre las fórmulas de Excel por la nota única que indicó (en la sección 16) y recompilando los tres formatos.
 
@@ -2012,9 +1992,9 @@ Los archivos están en `/mnt/user-data/outputs/modificado_v3/`.
 
 ---
 
-### 7. Aprobación de la versión 3 por las estudiantes
+## 7. Aprobación de la versión 3 por las estudiantes
 
-#### Mensaje enviado
+### Mensaje enviado
 
 Karina Hernández Cruz y Claudia Román García confirmamos que revisamos la última entrega del reporte del ejercicio modificado y aprobamos esta versión 3, con el alcance de verificación y los supuestos documentados.
 
@@ -2043,7 +2023,7 @@ Deja las firmas y fechas en blanco para completarlas personalmente. No generes n
 
 Entrega el reporte completo actualizado en Markdown, Word editable y PDF, con los mismos nombres de la versión 3. Genera el PDF desde el mismo Word y conserva el formato. No crees una versión 4.
 
-#### Respuesta final de Claude
+### Respuesta final de Claude
 
 Actualicé el estado de aprobación y entrego el reporte completo en Markdown, Word editable y PDF (62 páginas), con los mismos nombres de la versión 3. El PDF se generó desde ese mismo Word.
 
@@ -2061,33 +2041,40 @@ Archivos en `/mnt/user-data/outputs/modificado_v3/`:
 - `Reporte_modificado_v3.pdf`
 ---
 
-### 8. Archivos finales entregados por Claude
+## 8. Archivos finales entregados por Claude
 
 Los siguientes enlaces corresponden a los archivos conservados en esta carpeta al finalizar las actualizaciones de la versión 3.
 
-#### Reporte final
+### Reporte final
 
-- [Reporte en PDF](Version_3/Reporte_modificado_v3.pdf)
-- [Reporte editable en Word](Version_3/Reporte_modificado_v3.docx)
-- [Reporte en Markdown](Version_3/reporte_modificado_v3.md)
+- [Reporte en PDF](Reporte_modificado_v3.pdf)
+- [Reporte editable en Word](Reporte_modificado_v3.docx)
+- [Reporte en Markdown](reporte_modificado_v3.md)
 
-#### Código
+### Código
 
-- [Código de Python](Version_3/ej_5_34_modificado_v3.py)
+- [Código de Python](ej_5_34_modificado_v3.py)
 
-#### Figuras
+### Figuras
 
-- [Esquema de los casos A y B](Version_3/esquema_casos_modificado_v3.png)
-- [Gráfica de calentamiento](Version_3/calentamiento_modificado_v3.png)
-- [Gráfica de calentamiento normalizado](Version_3/calentamiento_normalizado_modificado_v3.png)
-- [Gráfica de enfriamiento](Version_3/enfriamiento_modificado_v3.png)
+- [Esquema de los casos A y B](esquema_casos_modificado_v3.png)
+- [Gráfica de calentamiento](calentamiento_modificado_v3.png)
+- [Gráfica de calentamiento normalizado](calentamiento_normalizado_modificado_v3.png)
+- [Gráfica de enfriamiento](enfriamiento_modificado_v3.png)
 
-#### Tablas de resultados
+### Tablas de resultados
 
-- [Resultados numéricos — CSV](Version_3/resultados_modificado_v3.csv)
-- [Estudio de convergencia — CSV](Version_3/convergencia_modificado_v3.csv)
+- [Resultados numéricos — CSV](resultados_modificado_v3.csv)
+- [Estudio de convergencia — CSV](convergencia_modificado_v3.csv)
 
 Las actualizaciones finales modificaron la presentación, la atribución de las comprobaciones y el estado de aprobación. Según las respuestas de Claude, el código, las figuras y los CSV se conservaron sin cambios durante esas actualizaciones.
+
+---
+
+## Navegación
+
+- [Volver al ejercicio modificado](../)
+- [Consultar la versión 2](../Version_2/)
 
 ---
 
