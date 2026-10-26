@@ -1,4 +1,4 @@
-# Presentación del proyecto — Ejercicio 5-34
+# Video de presentación del proyecto — Ejercicio 5-34
 
 **Estudiantes:**
 
