@@ -620,7 +620,7 @@ Registro del prompt de revisión, la respuesta recibida y los archivos entregado
 
 ---
 
-### 1. Prompt enviado a Claude
+## 1. Prompt enviado a Claude
 
 Prepara la VERSIÓN 2 del reporte del ejercicio modificado 5-34. Parte de la versión 1 e incorpora las observaciones de auditoría que se detallan abajo.
 
@@ -1042,7 +1042,7 @@ Prepara ahora la versión 2 completa siguiendo estas instrucciones.
 
 ---
 
-### 2. Respuesta de Claude
+## 2. Respuesta de Claude
 
 Empecé la versión 2. Dato importante: el documento de cálculos manuales, el libro de texto y la auditoría de la v1 no están en la sesión, así que no puedo abrirlos. Registraré su confirmación manual tal como la declaran y no afirmaré haber comparado documentos que no vi. Ahora estoy ajustando el código (energía en el instante exacto del cruce, variante concentrada de B con la resistencia del aluminio y figuras con letra más grande).
 
@@ -1119,29 +1119,36 @@ Archivos en `/mnt/user-data/outputs/modificado_v2/`:
   
 ---
 
-### 3. Archivos entregados
+## 3. Archivos entregados
 
-#### Reporte
+### Reporte
 
-- [Reporte en PDF](Version_2/Reporte_modificado_v2.pdf)
-- [Reporte editable en Word](Version_2/Reporte_modificado_v2.docx)
-- [Reporte en Markdown](Version_2/reporte_modificado_v2.md)
+- [Reporte en PDF](Reporte_modificado_v2.pdf)
+- [Reporte editable en Word](Reporte_modificado_v2.docx)
+- [Reporte en Markdown](reporte_modificado_v2.md)
 
-#### Código
+### Código
 
-- [Código de Python](Version_2/ej_5_34_modificado_v2.py)
+- [Código de Python](ej_5_34_modificado_v2.py)
 
-#### Esquema y gráficas
+### Esquema y gráficas
 
-- [Esquema de los casos A y B](Version_2/esquema_casos_modificado_v2.png)
-- [Gráfica de calentamiento](Version_2/calentamiento_modificado_v2.png)
-- [Gráfica de calentamiento normalizado](Version_2/calentamiento_normalizado_modificado_v2.png)
-- [Gráfica de enfriamiento](Version_2/enfriamiento_modificado_v2.png)
+- [Esquema de los casos A y B](esquema_casos_modificado_v2.png)
+- [Gráfica de calentamiento](calentamiento_modificado_v2.png)
+- [Gráfica de calentamiento normalizado](calentamiento_normalizado_modificado_v2.png)
+- [Gráfica de enfriamiento](enfriamiento_modificado_v2.png)
 
-#### Datos
+### Datos
 
-- [Resultados de los cálculos](Version_2/resultados_modificado_v2.csv)
-- [Estudio de convergencia](Version_2/convergencia_modificado_v2.csv)
+- [Resultados de los cálculos](resultados_modificado_v2.csv)
+- [Estudio de convergencia](convergencia_modificado_v2.csv)
+
+---
+
+## 4. Versión siguiente
+
+[Consultar la conversación de la versión 3](../Version_3/Conversacion_con_Claude.md)
+
 
 ---
 
