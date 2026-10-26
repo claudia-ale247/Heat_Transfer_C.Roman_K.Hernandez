@@ -1,14 +1,15 @@
-# Video de presentación del proyecto — Ejercicio 5-34
+# Video de presentación del proyecto
 
-**Estudiantes:**
+## Ejercicio 5-34: análisis térmico y mejora del enfriamiento
 
+**Curso:** Transferencia de Calor — INQU 4001
+
+**Integrantes:**
 - Karina Hernández Cruz
 - Claudia Román García
 
-## Video de la presentación
+[▶ Ver el video de presentación](https://drive.google.com/file/d/1gNaXLHMC0nCE3QBiGDkVMdtBHb7dLcU1/view?usp=drive_link)
 
-[Ver la presentación completa](PEGA_AQUI_EL_ENLACE)
-
-La presentación explica el ejercicio original, la adaptación para reducir el tiempo de enfriamiento, el proceso de trabajo con Claude, las auditorías y la comparación con nuestros cálculos.
+La presentación explica la solución del ejercicio original y su modificación para reducir el tiempo de enfriamiento. Incluye la organización del repositorio, el uso de Claude, las auditorías, la comparación con los cálculos manuales y las conclusiones del proyecto.
 
 [Volver al README principal](../README.md)
