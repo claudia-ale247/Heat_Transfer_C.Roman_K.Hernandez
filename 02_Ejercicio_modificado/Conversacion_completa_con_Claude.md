@@ -491,7 +491,62 @@ Continúa ahora con las correcciones utilizando este alcance.
 
 ## 3. Respuesta de Claude — Reporte modificado versión 3
 
-[PEGAR AQUÍ LA RESPUESTA DE CLAUDE CON LA ENTREGA DEL REPORTE, SUS RESULTADOS Y LAS COMPROBACIONES REALIZADAS.]
+Con este alcance sí puedo preparar la v3 con lo que ya está en la sesión (reporte, código y resultados de la v2). Empiezo revisando el prompt completo y el estado de las herramientas de construcción.
+
+Sigo con la versión 3. Ya corrí el código con los nombres v3 y reproduce la v2 exactamente (CSV idénticos). Ahora preparo el texto de la v3 con el alcance que indicaron: la confirmación de ustedes queda como comunicada, sin afirmar que abrí su documento. Después construyo el Word y el PDF y reviso las páginas.
+
+Avance: el código v3 ya corre (reproduce los CSV de la v2 sin cambios y añade los primeros pasos del caso B). Ahora escribo las correcciones del texto (secciones 1, 4, 5.2, 8.5–8.6, 9.5–9.6, 10, 11, 12, 16 y los registros de cambios) y el nuevo registro de verificación de 7 columnas.
+
+Ya tengo el reporte v3 en Markdown generado con todas las correcciones (cifras salen del código, sin pegar a mano). Estoy puliendo unas frases residuales y verificando que CSV y figuras coincidan con la v2; luego genero Word y PDF y reviso cada página.
+
+El PDF de la v3 ya se generó (51 páginas). Voy revisando las páginas una por una; hasta la 16 no veo cortes ni símbolos dañados. Sigo con el resto y las tablas de 7 columnas del registro.
+
+La tabla de 7 columnas del registro ya cabe en la página y el PDF queda en 49 páginas. Estoy haciendo las comprobaciones finales (ecuaciones del caso B, coincidencia Markdown–Word–PDF, imágenes) antes de entregar los 10 archivos.
+
+La versión 3 está lista, con los 10 archivos y el título "Versión 3 — preparada para revisión final de las estudiantes". Las firmas y fechas quedan en blanco, y no declara aprobación ni verificación manual del 100 %.
+
+**Qué no pude hacer.** Su documento de cálculos manuales y el Excel no estaban adjuntos, y tampoco el libro ni el PDF de la v2 con comentarios. Por eso no comparé su documento valor por valor, y de las tablas del libro solo cito lo que comunicó la auditoría.
+- Su confirmación aparece como "comunicada por las estudiantes; documento no inspeccionado". Solo se contrasta la cifra de 1.217 h del caso B.
+- Las páginas que cito de su documento (6–8, 10–14, 15–18, 19–20, 21, 22) vienen del prompt y están marcadas como "indicadas, no verificadas aquí".
+- Apliqué las observaciones de la auditoría tal como las enumera su prompt, no los comentarios individuales del PDF auditado.
+- Como no hubo contraste con sus valores, ninguna fila del registro lleva la clasificación "discrepancia".
+
+**Correcciones aplicadas.**
+- **Sección 4:** las reducciones absolutas de resistencia se suman, y sus porcentajes también si comparten denominador. Con la misma base: 66.6 % + 26.6 % = 93.2 % de R″tot,A. Los factores y los porcentajes de bases distintas no se suman, y la mejora del tiempo viene del transitorio. Las capacidades llevan su denominador: aluminio = 12.5 % del metal inferior, y B respecto de A = 8.64 %.
+- **Sección 5.2 y referencias:** distingo lo que consulté de lo que comunicó la auditoría. No asigno temperatura de referencia.
+- **Sección 9.6:** separo la interpolación entre pasos (explícito) de la búsqueda de raíz de Brent (sistema nodal exacto en el tiempo). Aclaro que esa solución es exacta solo para el sistema discretizado, no para el problema continuo.
+- **Sección 9.5:** añadí los primeros pasos de B con Δt = 0.1 s y propiedades sin redondear. Aclaro que el avance nodo a nodo no es la velocidad de un frente de calor.
+- **Sección 8.6:** la aproximación de B con la resistencia del aluminio deja de llamarse "reconstrucción". Es el planteamiento que ustedes comunicaron, calculado aquí a partir de su descripción. 1.2167 h contra 1.216 h es una diferencia de planteamiento, no de redondeo.
+- **Sección 8.5:** explico que la estimación de A por interpolación tabulada no es igual a la del código. No pude identificar sus puntos porque no vi su documento.
+- **Sección 10.6 (nueva):** el calentamiento se acerca al estado estacionario de forma asintótica, y t95 es el criterio de aproximación. B tiene un t95 menor pero un cambio total mucho menor (6.128 K contra 90.125 K). Su tasa inicial media es 8.0 % menor que la de A por su mayor capacidad.
+- **Sección 11:** el enfriamiento ya no aparece como ausente de su trabajo. Separo el concentrado, el nodal de ustedes y el del código. El factor (13.5597) y la reducción (92.625 %) salen de tiempos sin redondear. El tiempo de B es 37.770 min.
+- **Sección 16:** registro nuevo de 7 columnas con las clasificaciones manual, Excel, código, adicional y discrepancia. La variante de A con la capa superior, el modo nodal más lento y la sensibilidad no se marcan como verificados manualmente.
+- **Sección 18:** "Cambios de la versión 2 a la versión 3". Distingue los errores del reporte de las actualizaciones por evidencia nueva de ustedes. El registro v1→v2 se conserva.
+
+**Resultados.** No cambió ningún resultado numérico. Lo comprobé así:
+- Volví a ejecutar el código desde cero y los dos CSV son idénticos byte a byte a los de la v2.
+- Las cuatro figuras son idénticas píxel a píxel.
+- Temperatura máxima estacionaria: 105.125 °C (A) y 21.128 °C (B).
+- A llega a 93 °C en 33.085 h.
+- Enfriamiento de A: 8.536 h.
+- Los primeros pasos de A y de B coinciden con las fórmulas escritas, con diferencia menor que 10⁻¹² °C.
+- Residuos del balance de energía: de 2.3e-07 a 1.2e-05 J/m².
+
+**Archivos.** El Word tiene texto, tablas y 598 ecuaciones editables, y el PDF (49 páginas) se generó de ese mismo Word. Los números del Markdown aparecen en el Word y en el PDF. Revisé las páginas con contenido visualmente. La única que queda con espacio en blanco es la 24, porque la Figura 3 pasa a la página siguiente.
+
+Archivos en `/mnt/user-data/outputs/modificado_v3/` (adjuntos arriba):
+- `Reporte_modificado_v3.docx`
+- `Reporte_modificado_v3.pdf`
+- `reporte_modificado_v3.md`
+- `ej_5_34_modificado_v3.py`
+- `esquema_casos_modificado_v3.png`
+- `calentamiento_modificado_v3.png`
+- `calentamiento_normalizado_modificado_v3.png`
+- `enfriamiento_modificado_v3.png`
+- `resultados_modificado_v3.csv`
+- `convergencia_modificado_v3.csv`
+
+Para cerrar la v3, queda que ustedes comparen su documento y su Excel con las tablas de las secciones 9.5, 11.3 y 16, y que registren cualquier diferencia con su ubicación en la fila correspondiente.
 
 ---
 
