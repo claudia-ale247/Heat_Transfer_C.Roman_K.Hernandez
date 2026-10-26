@@ -520,3 +520,13 @@ Las auditorías evaluaron:
 Las conversaciones muestran las solicitudes y respuestas. Las auditorías documentan las observaciones. Los documentos de cálculo permiten contrastar los resultados.
 
 **Ambos ejercicios conservan tres versiones. La aprobación final de cada uno se registra exclusivamente en su PDF aprobado y firmado por Karina Hernández Cruz y Claudia Román García.**
+
+## 6. Video de presentación
+
+### Ejercicio 5-34: análisis térmico y mejora del enfriamiento
+
+**Presentado por:** Karina Hernández Cruz y Claudia Román García.
+
+En el video presentamos la organización del repositorio, la solución del ejercicio original y la modificación propuesta para reducir el tiempo de enfriamiento. Explicamos el uso de Claude, las auditorías realizadas, la comparación con nuestros cálculos manuales y las conclusiones del proyecto.
+
+[▶ Ver el video de presentación en Canva](https://canva.link/6uw8lfofdro3u25)
