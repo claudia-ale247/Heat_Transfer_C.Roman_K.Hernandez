@@ -529,4 +529,4 @@ Las conversaciones muestran las solicitudes y respuestas. Las auditorías docume
 
 En el video presentamos la organización del repositorio, la solución del ejercicio original y la modificación propuesta para reducir el tiempo de enfriamiento. Explicamos el uso de Claude, las auditorías realizadas, la comparación con nuestros cálculos manuales y las conclusiones del proyecto.
 
-[▶ Ver el video de presentación en Canva](https://canva.link/6uw8lfofdro3u25)
+[Ver video de presentación del proyecto](https://canva.link/lr0hgn0avmlif31)
