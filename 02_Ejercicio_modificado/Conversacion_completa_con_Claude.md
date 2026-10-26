@@ -26,9 +26,9 @@ Los enlaces de entrega permiten consultar los archivos conservados de cada versi
 
 Registro del prompt inicial, la respuesta de Claude y los archivos entregados para la primera versión del ejercicio modificado 5-34.
 
-### 1. Prompt enviado a Claude
+## 1. Prompt enviado a Claude
 
-#### Mensaje enviado
+### Mensaje enviado
 
 Actúa como un ingeniero de nivel inicial que desarrolla y documenta una adaptación del ejercicio 5-34 de transferencia de calor. Prepara un reporte técnico completo en español, con explicaciones claras y cálculos suficientemente detallados para que las estudiantes puedan verificarlos manualmente.
 
@@ -512,9 +512,9 @@ Desarrolla ahora la versión 1 completa del reporte del ejercicio modificado sig
 
 ---
 
-### 2. Respuesta de Claude
+## 2. Respuesta de Claude
 
-#### Respuesta recibida
+### Respuesta recibida
 
 Recibí el prompt de la fase 2 (ejercicio modificado v1). Nota importante: los dos PDF base que menciona (`Problem_5-34_Base_and_Adapted.pdf` y `Revision_y_ajustes_Ejercicio_modificado_5_34.pdf`) no están en la sesión, así que no puedo afirmar que los consulté. Trabajo con las condiciones explícitas del prompt y la rúbrica, y lo declararé en el reporte. Empiezo por el código y la ejecución.
 
@@ -576,29 +576,35 @@ Archivos en `/mnt/user-data/outputs/modificado_v1/`:
 - resultados_modificado_v1.csv
 - convergencia_modificado_v1.csv
   
-#### Archivos entregados
+### Archivos entregados
 
 **Reporte**
 
-- [Reporte en PDF](Version_1/Reporte_modificado_v1.pdf)
-- [Reporte editable en Word](Version_1/Reporte_modificado_v1.docx)
-- [Reporte en Markdown](Version_1/reporte_modificado_v1.md)
+- [Reporte en PDF](Reporte_modificado_v1.pdf)
+- [Reporte editable en Word](Reporte_modificado_v1.docx)
+- [Reporte en Markdown](reporte_modificado_v1.md)
 
 **Código**
 
-- [Código de Python](Version_1/ej_5_34_modificado_v1.py)
+- [Código de Python](ej_5_34_modificado_v1.py)
 
 **Esquema y gráficas**
 
-- [Esquema de los casos A y B](Version_1/esquema_casos_modificado_v1.png)
-- [Gráfica de calentamiento](Version_1/calentamiento_modificado_v1.png)
-- [Gráfica de calentamiento normalizado](Version_1/calentamiento_normalizado_modificado_v1.png)
-- [Gráfica de enfriamiento](Version_1/enfriamiento_modificado_v1.png)
+- [Esquema de los casos A y B](esquema_casos_modificado_v1.png)
+- [Gráfica de calentamiento](calentamiento_modificado_v1.png)
+- [Gráfica de calentamiento normalizado](calentamiento_normalizado_modificado_v1.png)
+- [Gráfica de enfriamiento](enfriamiento_modificado_v1.png)
 
 **Datos de resultados**
 
-- [Resultados de los cálculos](Version_1/resultados_modificado_v1.csv)
-- [Resultados del estudio de convergencia](Version_1/convergencia_modificado_v1.csv)
+- [Resultados de los cálculos](resultados_modificado_v1.csv)
+- [Resultados del estudio de convergencia](convergencia_modificado_v1.csv)
+
+---
+
+## Continuación
+
+[Consultar la conversación de la versión 2](../Version_2/Conversacion_con_Claude.md)
 
 ---
 
